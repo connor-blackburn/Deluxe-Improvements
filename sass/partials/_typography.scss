@@ -1,0 +1,8 @@
+@import 'colours';
+
+@mixin heroHeading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    font-weight: medium;
+    color: $heroHeading;
+}

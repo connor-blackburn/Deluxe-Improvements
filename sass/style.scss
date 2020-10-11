@@ -1,5 +1,15 @@
-$main: red;
+// Importing font 'Roboto' thin and medium from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
+// SASS Partial Files
+@import 'partials/typography';
+@import 'partials/colours';
+@import 'partials/buttons';
+
+// Styling
 body {
-    background-color: $main;
+    background-color: $primaryBackground;
+}
+p {
+    @include heroHeading;
 }

@@ -1,8 +1,12 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAHb,GAAG;CAIT",
+    "mappings": "AACA,OAAO,CAAC,gFAAI;AAQZ,AAAA,IAAI,CAAC;EACD,gBAAgB,EETA,OAAO;CFU1B;;AACD,AAAA,CAAC,CAAC;ECTE,WAAW,EAAE,oBAAoB;EACjC,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,MAAM;EACnB,KAAK,ECDK,OAAO;CFSpB",
     "sources": [
-        "style.scss"
+        "style.scss",
+        "partials/_typography.scss",
+        "partials/_colours.scss",
+        "partials/_colours.scss",
+        "partials/_buttons.scss"
     ],
     "names": [],
     "file": "style.css"
