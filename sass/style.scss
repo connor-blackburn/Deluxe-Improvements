@@ -21,7 +21,7 @@ body {
 }
 
 .hero_left {
-    flex: 1.5;
+    flex: 1;
     margin-left: 15%;
 
     h1 {
@@ -45,7 +45,13 @@ body {
 
 .hero_right {
     flex: 1;
-    height: 110vh;
-    border: 2px solid $accent;
+    height: 120vh;
+    box-shadow: 0px 4px 7px rgba(0 , 0, 0, 0.2);
+}
+
+// About Section
+.about_wrapper {
+    height: 100vh;
+    background-color: $secondaryBackground;
 }
 
