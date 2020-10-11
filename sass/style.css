@@ -19,7 +19,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 .hero_left h1 {
@@ -61,7 +61,41 @@ body {
 }
 
 .about_wrapper {
-  height: 100vh;
+  height: 80vh;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding-top: 6%;
+}
+
+.about_wrapper h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.about_wrapper p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #969696;
+  margin: 2% 10%;
+}
+
+.about_wrapper img {
+  position: absolute;
+  width: 48%;
+  height: 50%;
+  opacity: .1;
+  top: 145%;
+  left: 51%;
+  z-index: 0;
 }
 /*# sourceMappingURL=style.css.map */

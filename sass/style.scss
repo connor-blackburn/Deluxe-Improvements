@@ -22,7 +22,7 @@ body {
 
 .hero_left {
     flex: 1;
-    margin-left: 15%;
+    margin-left: 10%;
 
     h1 {
     @include heroHeading;
@@ -51,7 +51,30 @@ body {
 
 // About Section
 .about_wrapper {
-    height: 100vh;
+    height: 80vh;
     background-color: $secondaryBackground;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 6%;
+
+    h1 {
+        @include pageHeading;
+    }
+
+    p {
+        @include pageDescription;
+        margin: 2% 10%;
+    }
+
+    img {
+        position: absolute;
+        width: 48%;
+        height: 50%;
+        opacity: .1;
+        top: 145%;
+        left: 51%;
+        z-index: 0;
+    }
 }
 

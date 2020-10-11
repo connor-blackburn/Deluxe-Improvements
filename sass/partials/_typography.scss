@@ -14,3 +14,17 @@
     font-weight: 300;
     color: $description;
 }
+
+@mixin pageHeading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: $secondaryHeading;
+}
+
+@mixin pageDescription {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: $description;
+}
