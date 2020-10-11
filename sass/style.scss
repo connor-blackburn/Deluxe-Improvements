@@ -8,8 +8,44 @@
 
 // Styling
 body {
+    padding: 0;
+    margin: 0;
     background-color: $primaryBackground;
 }
-p {
-    @include heroHeading;
+
+// Hero Section
+.hero_wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
 }
+
+.hero_left {
+    flex: 1.5;
+    margin-left: 15%;
+
+    h1 {
+    @include heroHeading;
+    }
+        span {
+            color: $accent;
+       
+        }
+
+    p {
+        @include heroDescription;
+        margin: 50px 50px 50px 0px;
+    }
+
+    button {
+        @include heroButton;
+        
+    }
+}
+
+.hero_right {
+    flex: 1;
+    height: 110vh;
+    border: 2px solid $accent;
+}
+

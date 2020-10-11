@@ -1,0 +1,11 @@
+@import 'typography';
+@import 'colours';
+
+@mixin heroButton {
+    background-color: $accent;
+    color: $heroHeading;
+    padding: 1em 3em;
+    border: none;
+    font-size: 26px;
+    padding: .5em 7em;
+}
