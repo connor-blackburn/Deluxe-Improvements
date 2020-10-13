@@ -2,7 +2,6 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #2E2E2E;
 }
 
 .hero_wrapper {
@@ -13,6 +12,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #2E2E2E;
 }
 
 .hero_left {
@@ -97,6 +97,10 @@ body {
   top: 145%;
   left: 51%;
   z-index: 0;
+}
+
+.services_wrapper {
+  height: 200vh;
 }
 
 .row_one {
@@ -245,5 +249,27 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.testimonials_wrapper {
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: -20px;
+  height: 40vh;
+}
+
+.testimonials_wrapper .testimonial_heading h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.testimonials_wrapper .tesimonial_content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #969696;
+  margin: 5% 10%;
 }
 /*# sourceMappingURL=style.css.map */

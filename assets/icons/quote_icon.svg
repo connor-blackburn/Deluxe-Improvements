@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="276" height="249" viewBox="0 0 276 249">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00854b;
+      }
+
+      .cls-2 {
+        opacity: 0.203;
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_126" data-name="Rectangle 126" class="cls-1" width="276" height="249" transform="translate(0 0.703)"/>
+    </clipPath>
+  </defs>
+  <g id="quote_icon" data-name="quote icon" class="cls-2" transform="translate(0 -0.703)">
+    <path id="Path_75" data-name="Path 75" class="cls-1" d="M0,111.564V218.557H117.641V111.564H39.214c0-39.329,35.183-71.328,78.427-71.328V4.571C52.77,4.571,0,52.565,0,111.564Z" transform="translate(0.438 13.027)"/>
+    <path id="Path_76" data-name="Path 76" class="cls-1" d="M154.213,40.236V4.571c-64.871,0-117.641,47.993-117.641,106.993V218.557H154.213V111.564H75.786c0-39.329,35.183-71.328,78.427-71.328Z" transform="translate(120.724 13.027)"/>
+  </g>
+</svg>

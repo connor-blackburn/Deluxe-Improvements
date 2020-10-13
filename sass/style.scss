@@ -10,7 +10,6 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: $primaryBackground;
 }
 
 // Hero Section
@@ -18,6 +17,7 @@ body {
     display: flex;
     height: 100vh;
     align-items: center;
+    background-color: $primaryBackground;
 }
 
 .hero_left {
@@ -79,7 +79,10 @@ body {
 }
 
 // Services Section
- 
+
+.services_wrapper {
+    height: 200vh;
+}
 
 .row_one {
         display: flex;
@@ -172,4 +175,30 @@ body {
 .service_image {
     flex: 1;
 }
+}
+
+// Testimonial Section
+.testimonials_wrapper {
+    background-color: $secondaryBackground;
+    text-align: center;
+    margin-top: -20px;
+    height: 40vh;
+
+    .testimonial_heading {
+        
+        h1 {
+            @include pageHeading; 
+        }
+
+    }
+
+    .tesimonial_content {
+
+        p {
+            @include pageDescription;
+            margin: 5% 10%;
+        }
+
+    }
+
 }
