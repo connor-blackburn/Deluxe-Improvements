@@ -78,3 +78,98 @@ body {
     }
 }
 
+// Services Section
+ 
+
+.row_one {
+        display: flex;
+        height: 50vh;
+    
+
+    .service_description {
+        flex: 1;
+        background-color: $primaryBackground;
+        
+        h2 {
+            @include serviceHeading;
+        }
+
+        p {
+            @include serviceDescription;
+            margin: 2em;
+        }
+    }
+
+    .service_image {
+        flex: 1;
+    }
+}
+
+.row_two {
+    display: flex;
+    height: 50vh;
+
+.service_description {
+    flex: 1;
+    background-color: $primaryBackground;
+    
+    h2 {
+        @include serviceHeading;
+    }
+
+    p {
+        @include serviceDescription;
+        margin: 2em;
+    }
+}
+
+.service_image {
+    flex: 1;
+}
+}
+
+.row_three {
+    display: flex;
+    height: 50vh;
+
+.service_description {
+    flex: 1;
+    background-color: $primaryBackground;
+    
+    h2 {
+        @include serviceHeading;
+    }
+
+    p {
+        @include serviceDescription;
+        margin: 2em;
+    }
+}
+
+.service_image {
+    flex: 1;
+}
+}
+
+.row_four {
+    display: flex;
+    height: 50vh;
+
+.service_description {
+    flex: 1;
+    background-color: $primaryBackground;
+    
+    h2 {
+        @include serviceHeading;
+    }
+
+    p {
+        @include serviceDescription;
+        margin: 2em;
+    }
+}
+
+.service_image {
+    flex: 1;
+}
+}

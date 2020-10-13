@@ -28,3 +28,19 @@
     font-weight: 300;
     color: $description;
 }
+
+@mixin serviceHeading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    text-align: center;
+    font-weight: 300;
+    color: $accent;
+}
+
+@mixin serviceDescription {
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 300;
+    color: $description;
+}
