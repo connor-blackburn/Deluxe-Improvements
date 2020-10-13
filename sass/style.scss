@@ -202,3 +202,30 @@ body {
     }
 
 }
+
+// Proccess Section
+.process_wrapper {
+    background-color: $primaryBackground;
+    text-align: center;
+
+    h1 {
+        @include pageHeading;
+        color: $heroHeading;
+        padding: 1em;
+
+        span {
+            color: $accent;
+        }
+    }
+
+    .process_content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-basis: 25%;
+
+        p {
+            @include pageDescription;
+        }
+    }
+}

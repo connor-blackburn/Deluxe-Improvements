@@ -272,4 +272,42 @@ body {
   color: #969696;
   margin: 5% 10%;
 }
+
+.process_wrapper {
+  background-color: #2E2E2E;
+  text-align: center;
+}
+
+.process_wrapper h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #000000;
+  color: #ffffff;
+  padding: 1em;
+}
+
+.process_wrapper h1 span {
+  color: #00854B;
+}
+
+.process_wrapper .process_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.process_wrapper .process_content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #969696;
+}
 /*# sourceMappingURL=style.css.map */
