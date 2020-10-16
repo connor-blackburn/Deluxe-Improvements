@@ -287,7 +287,6 @@ body {
 }
 
 // Getting Started Section
-
 .get_started_wrapper {
     text-align: center;
     height: 50vh;
@@ -316,5 +315,47 @@ body {
         @include heroButton;
         margin: 1em;
         cursor: pointer;
+    }
+}
+
+// Footer 
+.footer_wrapper {
+    background-color: $primaryBackground;
+    color: $heroHeading;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .footer_sections {
+        padding: .5em;
+        @include footerSections;
+        margin: 0 auto;
+        width: 30%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        a {
+            text-decoration: none;
+            @include footerSections;
+        }
+    }
+
+    .footer_socials {
+        font-size: 2em;
+        margin: 0 auto;
+        width: 10%;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        color: $heroHeading;
+        padding: .5em;
+    }
+
+    span {
+        @include footerSections;
+        color: $description;
     }
 }
