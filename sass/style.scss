@@ -229,3 +229,65 @@ body {
         }
     }
 }
+
+// Portfolio Section
+.portfolio_wrapper {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+
+    h1 {
+        @include pageHeading;
+    }
+
+    hr {
+        width: 50%;
+        margin: -3em 0 2em 0;
+        background-color: red;
+    }
+
+    .portfolio_gallery {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .row_one {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-basis: 34%;
+
+            .image_one {
+                flex: 1;
+            }
+            
+
+            .image_two {
+                flex: 1;
+            }
+            
+            .image_three {
+                flex: 1;
+            }
+        }
+
+        .row_two {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .image_four {
+                flex: 1;
+            }
+
+            .image_five {
+                flex: 1;
+            }
+
+            .image_six {
+                flex: 1;
+            }
+        }
+    }
+
+}
