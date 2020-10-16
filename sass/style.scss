@@ -39,7 +39,7 @@ body {
 
     button {
         @include heroButton;
-        
+        cursor: pointer;
     }
 }
 
@@ -240,12 +240,6 @@ body {
         @include pageHeading;
     }
 
-    hr {
-        width: 50%;
-        margin: -3em 0 2em 0;
-        background-color: red;
-    }
-
     .portfolio_gallery {
         display: flex;
         flex-wrap: wrap;
@@ -290,4 +284,37 @@ body {
         }
     }
 
+}
+
+// Getting Started Section
+
+.get_started_wrapper {
+    text-align: center;
+    height: 50vh;
+
+    .get_started_header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: -2em;
+
+        h1 {
+            @include pageHeading;
+            span {
+                color: $accent;
+            }
+        }
+    } 
+
+    p {
+        @include heroDescription;
+        margin: 1em;
+    }
+
+    button {
+        @include heroButton;
+        margin: 1em;
+        cursor: pointer;
+    }
 }
