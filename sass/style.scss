@@ -10,12 +10,55 @@
 body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+}
+
+// Navigation
+.nav_wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: $primaryBackground;
+
+    .nav_logo {
+        flex: 1.14;
+    }
+
+    .nav_links {
+        flex: 1;
+        z-index: 1;
+        background-color: $primaryBackground;
+        padding: 1em 0;
+    }
+
+    .nav_links ul {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color: $heroHeading;
+
+        li {
+            color: $heroHeading;
+            list-style: none;
+            flex-basis: 20%;
+            
+            a {
+                color: $heroHeading;
+                text-decoration: none;
+                @include navLinks;
+
+                &:hover {
+                    color: $accent;
+                    transition: .3s;
+                }
+            }
+        }
+    }
 }
 
 // Hero Section
 .hero_wrapper {
     display: flex;
-    height: 100vh;
+    height: 90vh;
     align-items: center;
     background-color: $primaryBackground;
 }
@@ -46,7 +89,11 @@ body {
 .hero_right {
     flex: 1;
     height: 120vh;
-    box-shadow: 0px 4px 7px rgba(0 , 0, 0, 0.2);
+
+    img {
+        box-shadow: 0px 4px 7px rgba(0 , 0, 0, 0.2);
+        z-index: -100;
+    }
 }
 
 // About Section
@@ -92,14 +139,21 @@ body {
     .service_description {
         flex: 1;
         background-color: $primaryBackground;
-        
+        display: flex;
+        flex-direction: column;
+
         h2 {
             @include serviceHeading;
+            flex: 1;
         }
 
         p {
+            flex: 2;
             @include serviceDescription;
-            margin: 2em;
+            font-size: 2em;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
         }
     }
 
@@ -112,18 +166,25 @@ body {
     display: flex;
     height: 50vh;
 
-.service_description {
-    flex: 1;
-    background-color: $primaryBackground;
-    
-    h2 {
-        @include serviceHeading;
-    }
+    .service_description {
+        flex: 1;
+        background-color: $primaryBackground;
+        display: flex;
+        flex-direction: column;
 
-    p {
-        @include serviceDescription;
-        margin: 2em;
-    }
+        h2 {
+            @include serviceHeading;
+            flex: 1;
+        }
+
+        p {
+            flex: 2;
+            @include serviceDescription;
+            font-size: 2em;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+        }
 }
 
 .service_image {
@@ -135,18 +196,25 @@ body {
     display: flex;
     height: 50vh;
 
-.service_description {
-    flex: 1;
-    background-color: $primaryBackground;
-    
-    h2 {
-        @include serviceHeading;
-    }
+    .service_description {
+        flex: 1;
+        background-color: $primaryBackground;
+        display: flex;
+        flex-direction: column;
 
-    p {
-        @include serviceDescription;
-        margin: 2em;
-    }
+        h2 {
+            @include serviceHeading;
+            flex: 1;
+        }
+
+        p {
+            flex: 2;
+            @include serviceDescription;
+            font-size: 2em;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+        }
 }
 
 .service_image {
@@ -158,18 +226,25 @@ body {
     display: flex;
     height: 50vh;
 
-.service_description {
-    flex: 1;
-    background-color: $primaryBackground;
-    
-    h2 {
-        @include serviceHeading;
-    }
+    .service_description {
+        flex: 1;
+        background-color: $primaryBackground;
+        display: flex;
+        flex-direction: column;
 
-    p {
-        @include serviceDescription;
-        margin: 2em;
-    }
+        h2 {
+            @include serviceHeading;
+            flex: 1;
+        }
+
+        p {
+            flex: 2;
+            @include serviceDescription;
+            font-size: 2em;
+            margin: 0 auto;
+            text-align: center;
+            width: 70%;
+        }
 }
 
 .service_image {
@@ -180,23 +255,41 @@ body {
 // Testimonial Section
 .testimonials_wrapper {
     background-color: $secondaryBackground;
-    text-align: center;
-    margin-top: -20px;
-    height: 40vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
 
     .testimonial_heading {
+        flex: 1;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
         
         h1 {
             @include pageHeading; 
-        }
 
+            span {
+                color: $accent;
+            }
+        }
     }
 
     .tesimonial_content {
+        flex: 2;
+        
+        img {
+            position: absolute;
+            margin: -3em 0 0 7em;
+            opacity: .8;
+        }
 
         p {
+            width: 60%;
+            text-align: center;
+            margin: 2em auto;
             @include pageDescription;
-            margin: 5% 10%;
         }
 
     }
@@ -328,7 +421,6 @@ body {
 
     .footer_sections {
         padding: .5em;
-        @include footerSections;
         margin: 0 auto;
         width: 30%;
         align-items: center;
