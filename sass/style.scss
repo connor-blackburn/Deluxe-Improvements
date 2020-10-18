@@ -8,10 +8,13 @@
 @import 'partials/breakpoints';
 
 // Styling
+html {
+    overflow-x: hidden;
+}
+
 body {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
 }
 
 // Navigation
@@ -29,6 +32,9 @@ body {
         z-index: 1;
         background-color: $primaryBackground;
         padding: 1em 0;
+        @include laptopLarge {
+            flex: 0.95
+        }
     }
 
     .nav_links ul {
@@ -67,18 +73,26 @@ body {
 .hero_left {
     flex: 1;
     margin-left: 10%;
+    @include laptopLarge {
+        margin-left: 5%
+    }
 
     h1 {
     @include heroHeading;
+    @include laptopLarge {
+        font-size: 3.5em;
+    }
     }
         span {
             color: $accent;
-       
         }
 
     p {
         @include heroDescription;
         margin: 50px 50px 50px 0px;
+        @include laptopLarge {
+            font-size: 1.75em;
+        }
     }
 
     button {
@@ -94,6 +108,11 @@ body {
     img {
         box-shadow: 0px 4px 7px rgba(0 , 0, 0, 0.2);
         z-index: -100;
+        @include laptopLarge {
+            height: 95%;
+            width: 90%;
+            float: right;
+        }
     }
 }
 
@@ -105,14 +124,23 @@ body {
     flex-direction: column;
     text-align: center;
     padding-top: 6%;
+    @include laptopLarge {
+        height: 70vh;
+    }
 
     h1 {
         @include pageHeading;
+        @include laptopLarge {
+            font-size: 3.5em;
+        }
     }
 
     p {
         @include pageDescription;
         margin: 2% 10%;
+        @include laptopLarge {
+            font-size: 1.75em;
+        }
     }
 
     img {
@@ -123,6 +151,9 @@ body {
         top: 145%;
         left: 51%;
         z-index: 0;
+        @include laptopLarge {
+            top: 135%;
+        }
     }
 }
 
@@ -146,6 +177,9 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            @include laptopLarge {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -155,6 +189,11 @@ body {
             margin: 0 auto;
             text-align: center;
             width: 70%;
+            @include laptopLarge {
+                font-size: 1.75em;
+                width: 60%;
+                padding-bottom: 2.5em;
+            }
         }
     }
 
@@ -176,6 +215,9 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            @include laptopLarge {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -185,6 +227,11 @@ body {
             margin: 0 auto;
             text-align: center;
             width: 70%;
+            @include laptopLarge {
+                font-size: 1.75em;
+                width: 60%;
+                padding-bottom: 2.5em;
+            }
         }
 }
 
@@ -206,6 +253,9 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            @include laptopLarge {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -215,6 +265,11 @@ body {
             margin: 0 auto;
             text-align: center;
             width: 70%;
+            @include laptopLarge {
+                font-size: 1.75em;
+                width: 60%;
+                padding-bottom: 2.5em;
+            }
         }
 }
 
@@ -236,6 +291,9 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            @include laptopLarge {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -245,6 +303,11 @@ body {
             margin: 0 auto;
             text-align: center;
             width: 70%;
+            @include laptopLarge {
+                font-size: 1.75em;
+                width: 60%;
+                padding-bottom: 2.5em;
+            }
         }
 }
 
@@ -259,20 +322,32 @@ body {
     height: 50vh;
     display: flex;
     flex-direction: column;
+    @include laptopLarge {
+        height: 40vh;
+    }
 
     .testimonial_heading {
         flex: 1;
-        
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
         
         h1 {
-            @include pageHeading; 
+            @include pageHeading;
+            @include laptopLarge {
+                font-size: 3em;
+                text-align: center;
+            }
 
             span {
                 color: $accent;
+            }
+
+            img {
+                @include laptopLarge {
+                    width: 10%;
+                }
             }
         }
     }
@@ -291,6 +366,9 @@ body {
             text-align: center;
             margin: 2em auto;
             @include pageDescription;
+            @include laptopLarge {
+                font-size: 1.5em;
+            }
         }
 
     }
@@ -306,6 +384,9 @@ body {
         @include pageHeading;
         color: $heroHeading;
         padding: 1em;
+        @include laptopLarge {
+            font-size: 3em;
+        }
 
         span {
             color: $accent;
@@ -320,6 +401,16 @@ body {
 
         p {
             @include pageDescription;
+            @include laptopLarge {
+                font-size: 1.5em;
+            }
+        }
+
+        img {
+            @include laptopLarge {
+                height: 100px;
+                width: 100px;
+            }
         }
     }
 }
@@ -332,6 +423,9 @@ body {
 
     h1 {
         @include pageHeading;
+        @include laptopLarge {
+            font-size: 3me;
+        }
     }
 
     .portfolio_gallery {
@@ -384,6 +478,10 @@ body {
 .get_started_wrapper {
     text-align: center;
     height: 50vh;
+    @include laptopLarge {
+        margin: 3em 0;
+        height: 40vh;
+    }
 
     .get_started_header{
         display: flex;
@@ -394,6 +492,10 @@ body {
 
         h1 {
             @include pageHeading;
+            @include laptopLarge {
+                font-size: 3em;
+            }
+
             span {
                 color: $accent;
             }
