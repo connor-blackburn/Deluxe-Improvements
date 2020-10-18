@@ -11,10 +11,10 @@
 html {
     overflow-x: hidden;
 }
-
 body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 // Navigation
@@ -35,6 +35,9 @@ body {
         @include laptopLarge {
             flex: 0.95
         }
+        @include laptop {
+            flex: .9;
+        }
     }
 
     .nav_links ul {
@@ -47,11 +50,18 @@ body {
             color: $heroHeading;
             list-style: none;
             flex-basis: 20%;
+            @include laptop {
+                flex-basis: 25%;
+                justify-content: space-between;
+            }
             
             a {
                 color: $heroHeading;
                 text-decoration: none;
                 @include navLinks;
+                @include laptop {
+                    font-size: 1.2em;
+                }
 
                 &:hover {
                     color: $accent;
@@ -76,11 +86,17 @@ body {
     @include laptopLarge {
         margin-left: 5%
     }
+    @include laptop {
+        margin-left: 5%;
+    }
 
     h1 {
     @include heroHeading;
     @include laptopLarge {
         font-size: 3.5em;
+    }
+    @include laptop {
+        font-size: 2.7em;
     }
     }
         span {
@@ -93,11 +109,18 @@ body {
         @include laptopLarge {
             font-size: 1.75em;
         }
+        @include laptop{
+            font-size: 1.25em;
+        }
     }
 
     button {
         @include heroButton;
         cursor: pointer;
+        @include laptop {
+            font-size: 1.25em;
+            padding: .5em 5em;
+        }
     }
 }
 
@@ -109,6 +132,11 @@ body {
         box-shadow: 0px 4px 7px rgba(0 , 0, 0, 0.2);
         z-index: -100;
         @include laptopLarge {
+            height: 95%;
+            width: 90%;
+            float: right;
+        }
+        @include laptop {
             height: 95%;
             width: 90%;
             float: right;
@@ -127,10 +155,16 @@ body {
     @include laptopLarge {
         height: 70vh;
     }
+    @include laptop{
+        height: 70vh;
+    }
 
     h1 {
         @include pageHeading;
         @include laptopLarge {
+            font-size: 3.5em;
+        }
+        @include laptop {
             font-size: 3.5em;
         }
     }
@@ -140,6 +174,9 @@ body {
         margin: 2% 10%;
         @include laptopLarge {
             font-size: 1.75em;
+        }
+        @include laptop {
+            font-size: 1.5em;
         }
     }
 
@@ -153,6 +190,9 @@ body {
         z-index: 0;
         @include laptopLarge {
             top: 135%;
+        }
+        @include laptop {
+            top: 138%;
         }
     }
 }
@@ -180,6 +220,9 @@ body {
             @include laptopLarge {
                 font-size: 3em;
             }
+            @include laptop {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -193,6 +236,11 @@ body {
                 font-size: 1.75em;
                 width: 60%;
                 padding-bottom: 2.5em;
+            }
+            @include laptop {
+                font-size: 1.75em;
+                width: 70%;
+                padding-bottom: 2em;
             }
         }
     }
@@ -218,6 +266,12 @@ body {
             @include laptopLarge {
                 font-size: 3em;
             }
+            @include laptop {
+                font-size: 3em;
+            }
+            @include laptop {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -231,6 +285,11 @@ body {
                 font-size: 1.75em;
                 width: 60%;
                 padding-bottom: 2.5em;
+            }
+            @include laptop {
+                font-size: 1.75em;
+                width: 70%;
+                padding-bottom: 2em;
             }
         }
 }
@@ -256,6 +315,9 @@ body {
             @include laptopLarge {
                 font-size: 3em;
             }
+            @include laptop {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -269,6 +331,11 @@ body {
                 font-size: 1.75em;
                 width: 60%;
                 padding-bottom: 2.5em;
+            }
+            @include laptop {
+                font-size: 1.75em;
+                width: 70%;
+                padding-bottom: 2em;
             }
         }
 }
@@ -294,6 +361,9 @@ body {
             @include laptopLarge {
                 font-size: 3em;
             }
+            @include laptop {
+                font-size: 3em;
+            }
         }
 
         p {
@@ -307,6 +377,11 @@ body {
                 font-size: 1.75em;
                 width: 60%;
                 padding-bottom: 2.5em;
+            }
+            @include laptop {
+                font-size: 1.75em;
+                width: 70%;
+                padding-bottom: 2em;
             }
         }
 }
@@ -325,6 +400,9 @@ body {
     @include laptopLarge {
         height: 40vh;
     }
+    @include laptop {
+        height: 35vh;
+    }
 
     .testimonial_heading {
         flex: 1;
@@ -339,15 +417,13 @@ body {
                 font-size: 3em;
                 text-align: center;
             }
+            @include laptop {
+                font-size: 2.5em;
+                text-align: center;
+            }
 
             span {
                 color: $accent;
-            }
-
-            img {
-                @include laptopLarge {
-                    width: 10%;
-                }
             }
         }
     }
@@ -359,6 +435,10 @@ body {
             position: absolute;
             margin: -3em 0 0 7em;
             opacity: .8;
+            @include laptop {
+                height: 200px;
+                width: 200px;
+            }
         }
 
         p {
@@ -368,6 +448,10 @@ body {
             @include pageDescription;
             @include laptopLarge {
                 font-size: 1.5em;
+            }
+            @include laptop{
+                font-size: 1.5em;
+                width: 70%;
             }
         }
 
@@ -387,6 +471,9 @@ body {
         @include laptopLarge {
             font-size: 3em;
         }
+        @include laptop {
+            font-size: 2.5em;
+        }
 
         span {
             color: $accent;
@@ -404,10 +491,17 @@ body {
             @include laptopLarge {
                 font-size: 1.5em;
             }
+            @include laptop {
+                font-size: 1.25em;
+            }
         }
 
         img {
             @include laptopLarge {
+                height: 100px;
+                width: 100px;
+            }
+            @include laptop {
                 height: 100px;
                 width: 100px;
             }
@@ -424,7 +518,10 @@ body {
     h1 {
         @include pageHeading;
         @include laptopLarge {
-            font-size: 3me;
+            font-size: 3em;
+        }
+        @include laptop{
+            font-size: 2.5em;
         }
     }
 
@@ -432,6 +529,11 @@ body {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        img {
+            @include laptop {
+                height: 350px;
+            }
+        }
 
         .row_one {
             display: flex;
@@ -482,6 +584,10 @@ body {
         margin: 3em 0;
         height: 40vh;
     }
+    @include laptop {
+        margin: 3em 0;
+        height: 35vh;
+    }
 
     .get_started_header{
         display: flex;
@@ -495,6 +601,9 @@ body {
             @include laptopLarge {
                 font-size: 3em;
             }
+            @include laptop {
+                font-size: 2.5em;
+            }
 
             span {
                 color: $accent;
@@ -505,12 +614,19 @@ body {
     p {
         @include heroDescription;
         margin: 1em;
+        @include laptop {
+            font-size: 1.25em;
+            margin: 2em;
+        }
     }
 
     button {
         @include heroButton;
         margin: 1em;
         cursor: pointer;
+        @include laptop {
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -547,6 +663,9 @@ body {
         flex-direction: row;
         color: $heroHeading;
         padding: .5em;
+        @include laptop {
+            width: 15%;
+        }
     }
 
     span {
