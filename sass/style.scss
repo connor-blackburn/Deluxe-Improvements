@@ -25,6 +25,9 @@ body {
 
     .nav_logo {
         flex: 1.14;
+        @include tablet {
+            flex: 0;
+        }
     }
 
     .nav_links {
@@ -37,6 +40,9 @@ body {
         }
         @include laptop {
             flex: .9;
+        }
+        @include tablet {
+            flex: 1;
         }
     }
 
@@ -54,12 +60,20 @@ body {
                 flex-basis: 25%;
                 justify-content: space-between;
             }
+            @include tablet {
+                flex-basis: 25%;
+                justify-content: space-evenly;
+                text-align: center;
+            }
             
             a {
                 color: $heroHeading;
                 text-decoration: none;
                 @include navLinks;
                 @include laptop {
+                    font-size: 1.2em;
+                }
+                @include tablet {
                     font-size: 1.2em;
                 }
 
@@ -78,6 +92,11 @@ body {
     height: 90vh;
     align-items: center;
     background-color: $primaryBackground;
+    @include tablet {
+        background-image: url(../assets/images/tablet_hero.png);
+        background-size: cover;
+        background-color: transparent;
+    }
 }
 
 .hero_left {
@@ -89,15 +108,25 @@ body {
     @include laptop {
         margin-left: 5%;
     }
+    @include tablet {
+        text-align: center;
+        margin-top: 0em;
+        width: 50%;
+    }
 
     h1 {
-    @include heroHeading;
-    @include laptopLarge {
-        font-size: 3.5em;
-    }
-    @include laptop {
-        font-size: 2.7em;
-    }
+        @include heroHeading;
+        @include laptopLarge {
+            font-size: 3.5em;
+        }
+        @include laptop {
+            font-size: 2.7em;
+        }
+        @include tablet {
+            font-size: 3.5em;
+            color: $secondaryHeading;
+            width: 90%
+        }
     }
         span {
             color: $accent;
@@ -112,6 +141,10 @@ body {
         @include laptop{
             font-size: 1.25em;
         }
+        @include tablet {
+            color: $secondaryHeading;
+            margin: 70px 50px 70px 0px;
+        }
     }
 
     button {
@@ -121,12 +154,20 @@ body {
             font-size: 1.25em;
             padding: .5em 5em;
         }
+        @include tablet {
+            width: 70%;
+            font-size: 1.5em;
+            padding: .8em 3em;
+        }
     }
 }
 
 .hero_right {
     flex: 1;
     height: 120vh;
+    @include tablet {
+        display: none;
+    }
 
     img {
         box-shadow: 0px 4px 7px rgba(0 , 0, 0, 0.2);
@@ -158,6 +199,9 @@ body {
     @include laptop{
         height: 70vh;
     }
+    @include tablet {
+        height: 70vh;
+    }
 
     h1 {
         @include pageHeading;
@@ -166,6 +210,9 @@ body {
         }
         @include laptop {
             font-size: 3.5em;
+        }
+        @include tablet {
+            font-size: 3em;
         }
     }
 
@@ -176,6 +223,9 @@ body {
             font-size: 1.75em;
         }
         @include laptop {
+            font-size: 1.5em;
+        }
+        @include tablet {
             font-size: 1.5em;
         }
     }
@@ -193,6 +243,9 @@ body {
         }
         @include laptop {
             top: 138%;
+        }
+        @include tablet {
+            top: 130%;
         }
     }
 }
@@ -223,6 +276,9 @@ body {
             @include laptop {
                 font-size: 3em;
             }
+            @include tablet {
+                font-size: 2em;
+            }
         }
 
         p {
@@ -241,6 +297,11 @@ body {
                 font-size: 1.75em;
                 width: 70%;
                 padding-bottom: 2em;
+            }
+            @include tablet {
+                font-size: 1.5em;
+                width: 70%;
+                padding-bottom: 3em;
             }
         }
     }
@@ -272,6 +333,9 @@ body {
             @include laptop {
                 font-size: 3em;
             }
+            @include tablet {
+                font-size: 2em;
+            }
         }
 
         p {
@@ -290,6 +354,11 @@ body {
                 font-size: 1.75em;
                 width: 70%;
                 padding-bottom: 2em;
+            }
+            @include tablet {
+                font-size: 1.5em;
+                width: 70%;
+                padding-bottom: 3em;
             }
         }
 }
@@ -318,6 +387,9 @@ body {
             @include laptop {
                 font-size: 3em;
             }
+            @include tablet {
+                font-size: 2em;
+            }
         }
 
         p {
@@ -336,6 +408,11 @@ body {
                 font-size: 1.75em;
                 width: 70%;
                 padding-bottom: 2em;
+            }
+            @include tablet {
+                font-size: 1.5em;
+                width: 70%;
+                padding-bottom: 3em;
             }
         }
 }
@@ -364,6 +441,9 @@ body {
             @include laptop {
                 font-size: 3em;
             }
+            @include tablet {
+                font-size: 2em;
+            }
         }
 
         p {
@@ -382,6 +462,11 @@ body {
                 font-size: 1.75em;
                 width: 70%;
                 padding-bottom: 2em;
+            }
+            @include tablet {
+                font-size: 1.5em;
+                width: 70%;
+                padding-bottom: 3em;
             }
         }
 }
@@ -403,6 +488,9 @@ body {
     @include laptop {
         height: 35vh;
     }
+    @include tablet {
+        height: 40vh;
+    }
 
     .testimonial_heading {
         flex: 1;
@@ -420,6 +508,10 @@ body {
             @include laptop {
                 font-size: 2.5em;
                 text-align: center;
+            }
+            @include tablet {
+                text-align: center;
+                font-size: 2em;
             }
 
             span {
@@ -439,6 +531,12 @@ body {
                 height: 200px;
                 width: 200px;
             }
+            @include tablet {
+                height: 200px;
+                width: 200px;
+                margin: -2em 0 0 3em;
+                opacity: 0.9;
+            }
         }
 
         p {
@@ -452,6 +550,10 @@ body {
             @include laptop{
                 font-size: 1.5em;
                 width: 70%;
+            }
+            @include tablet{
+                font-size: 1.5em;
+                width: 85%;
             }
         }
 
@@ -474,6 +576,9 @@ body {
         @include laptop {
             font-size: 2.5em;
         }
+        @include tablet {
+            font-size: 2em;
+        }
 
         span {
             color: $accent;
@@ -486,6 +591,24 @@ body {
         flex-wrap: wrap;
         flex-basis: 25%;
 
+        div {
+            @include tablet {
+                width: 50%;
+            }
+
+            .magic {
+                @include tablet {
+                    margin-top: 2em;
+                }
+            }
+
+            .result {
+                @include tablet {
+                    margin-top: 2em;
+                }
+            }
+        }
+
         p {
             @include pageDescription;
             @include laptopLarge {
@@ -493,6 +616,9 @@ body {
             }
             @include laptop {
                 font-size: 1.25em;
+            }
+            @include tablet {
+                font-size: 1.5em;
             }
         }
 
@@ -502,6 +628,10 @@ body {
                 width: 100px;
             }
             @include laptop {
+                height: 100px;
+                width: 100px;
+            }
+            @include tablet {
                 height: 100px;
                 width: 100px;
             }
@@ -523,57 +653,17 @@ body {
         @include laptop{
             font-size: 2.5em;
         }
-    }
-
-    .portfolio_gallery {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        img {
-            @include laptop {
-                height: 350px;
-            }
-        }
-
-        .row_one {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            flex-basis: 34%;
-
-            .image_one {
-                flex: 1;
-            }
-            
-
-            .image_two {
-                flex: 1;
-            }
-            
-            .image_three {
-                flex: 1;
-            }
-        }
-
-        .row_two {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-
-            .image_four {
-                flex: 1;
-            }
-
-            .image_five {
-                flex: 1;
-            }
-
-            .image_six {
-                flex: 1;
-            }
+        @include tablet{
+            font-size: 2em;
         }
     }
 
+    .carousel {
+        margin: 3em 0 6em 0em;
+        @include tablet {
+            margin: 3em 0 6em 0em;
+        }
+    }
 }
 
 // Getting Started Section
@@ -588,6 +678,11 @@ body {
         margin: 3em 0;
         height: 35vh;
     }
+    @include tablet {
+        margin: 5em 0;
+        height: 25vh;
+    }
+
 
     .get_started_header{
         display: flex;
@@ -604,6 +699,9 @@ body {
             @include laptop {
                 font-size: 2.5em;
             }
+            @include tablet {
+                font-size: 2em;
+            }
 
             span {
                 color: $accent;
@@ -618,6 +716,10 @@ body {
             font-size: 1.25em;
             margin: 2em;
         }
+        @include tablet {
+            font-size: 1.25em;
+            margin: 2em;
+        }
     }
 
     button {
@@ -625,6 +727,9 @@ body {
         margin: 1em;
         cursor: pointer;
         @include laptop {
+            font-size: 1.5em;
+        }
+        @include tablet {
             font-size: 1.5em;
         }
     }
@@ -650,6 +755,9 @@ body {
             text-decoration: none;
             @include footerSections;
         }
+        @include tablet {
+            width: 50%;
+        }
     }
 
     .footer_socials {
@@ -666,10 +774,43 @@ body {
         @include laptop {
             width: 15%;
         }
+        @include tablet {
+            width: 20%;
+        }
     }
 
     span {
         @include footerSections;
         color: $description;
     }
+}
+
+
+
+
+
+
+// Flickity CSS
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.carousel-cell img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
 }

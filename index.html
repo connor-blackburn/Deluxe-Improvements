@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="sass/style.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/352233a6f0.js" crossorigin="anonymous"></script>
-</head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="flickity.min.css">
+  </head>
 <body>
     <!-- Navigation -->
     <nav>
@@ -119,18 +121,34 @@
     <section id="portfolio" class="portfolio_wrapper">
       <h1>Our Portfolio</h1>
       <div class="portfolio_gallery">
-        <div class="row_one">
-          <div class="image_one"><img src="assets/images/turf_paving.jpeg" width='99%' height='400px' alt=""></div>
-          <div class="image_two"><img src="assets/images/driveway.jpeg" width='99%' height='400px' alt=""></div>
-          <div class="image_three"><img src="assets/images/turf_fence2.jpeg" width='99%' height='400px' alt=""></div>
-        </div>
-        <div class="row_two">
-          <div class="image_four"><img src="assets/images/hero_image.jpg" width='99%' height='400px' alt=""></div>
-          <div class="image_five"><img src="assets/images/paving2.jpeg" width='99%' height='400px' alt=""></div>
-          <div class="image_six"><img src="assets/images/turf_fence.jpeg" width='99%' height='400px' alt=""></div>
-        </div>
+        
       </div>
     </section>
+
+
+    <div class="carousel">
+      <div class="carousel-cell">
+        <img src="assets/images/fencing.jpeg" alt="orange tree" />
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/images/paving2.jpeg" alt="One World Trade" />
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/images/hero_image.JPG" alt="drizzle" />
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/images/turf_fence2.jpeg" alt="cat nose" />
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/images/paving.jpeg" alt="contrail" />
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/images/driveway.jpeg" alt="golden hour" />
+      </div>
+      <div class="carousel-cell">
+        <img src="assets/images/turf_paving.jpeg" alt="flight formation" />
+      </div>
+    </div>
 
     <!-- Get Started Section -->
     <section id="get_started" class="get_started_wrapper">
@@ -161,5 +179,29 @@
       </div>
     </footer>
 
+<script src="flickity.pkgd.min.js"></script>
+<script>
+// external js: flickity.pkgd.js
+
+var carousel = document.querySelector('.carousel');
+var flkty = new Flickity( carousel, {
+  imagesLoaded: true,
+  percentPosition: false,
+});
+
+var imgs = carousel.querySelectorAll('.carousel-cell img');
+// get transform property
+var docStyle = document.documentElement.style;
+var transformProp = typeof docStyle.transform == 'string' ?
+  'transform' : 'WebkitTransform';
+
+flkty.on( 'scroll', function() {
+  flkty.slides.forEach( function( slide, i ) {
+    var img = imgs[i];
+    var x = ( slide.target + flkty.x ) * -1/3;
+    img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+  });
+});
+</script>
 </body>
 </html>
