@@ -25,7 +25,7 @@ body {
     background-color: $primaryBackground;
 
     .nav_logo {
-        flex: 1.14;
+        flex: 1;
         @include tablet {
             flex: 0;
         }
@@ -58,6 +58,8 @@ body {
         flex-direction: row;
         text-decoration: none;
         color: $heroHeading;
+        flex-basis: 20%;
+        justify-content: space-evenly;
 
         li {
             color: $heroHeading;
@@ -107,6 +109,11 @@ body {
     height: 90vh;
     align-items: center;
     background-color: $primaryBackground;
+    @include laptop{
+        background-image: url(../assets/images/tablet_hero.png);
+        background-size: cover;
+        background-color: transparent;
+    }
     @include tablet {
         background-image: url(../assets/images/tablet_hero.png);
         background-size: cover;
@@ -121,14 +128,18 @@ body {
 
 .hero_left {
     flex: 1;
-    margin-left: 10%;
+    margin-left: 5%;
     @include laptopLarge {
         margin-left: 5%
     }
-    @include laptop {
-        margin-left: 5%;
+    @include laptop{
+        margin-left: 0;
+        text-align: center;
+        margin-top: 0em;
+        width: 50%;
     }
     @include tablet {
+        margin-left: 0;
         text-align: center;
         margin-top: 0em;
         width: 50%;
@@ -145,17 +156,17 @@ body {
             font-size: 3.5em;
         }
         @include laptop {
-            font-size: 2.7em;
+            font-size: 4em;
+            color: $secondaryHeading;
         }
         @include tablet {
             font-size: 3.5em;
             color: $secondaryHeading;
-            width: 90%
+      
         }
         @include smartphoneLarge {
             font-size: 2.5em;
             color: $secondaryHeading;
-            width: 90%
         }
     }
         span {
@@ -164,20 +175,18 @@ body {
 
     p {
         @include heroDescription;
-        margin: 50px 50px 50px 0px;
+        margin: 2em 0;
         @include laptopLarge {
             font-size: 1.75em;
         }
-        @include laptop{
-            font-size: 1.25em;
+        @include laptop {
+            color: $secondaryHeading;
         }
         @include tablet {
             color: $secondaryHeading;
-            margin: 70px 50px 70px 0px;
         }
         @include smartphoneLarge {
             color: $secondaryHeading;
-            margin: 70px 50px 70px 0px;
         }
     }
 
@@ -185,8 +194,9 @@ body {
         @include heroButton;
         cursor: pointer;
         @include laptop {
-            font-size: 1.25em;
-            padding: .5em 5em;
+            width: 80%;
+            font-size: 1.5em;
+            padding: .8em 3em;
         }
         @include tablet {
             width: 70%;
@@ -198,7 +208,10 @@ body {
 
 .hero_right {
     flex: 1;
-    height: 120vh;
+    height: 110vh;
+    @include laptop {
+        display: none;
+    }
     @include tablet {
         display: none;
     }
@@ -224,20 +237,17 @@ body {
 
 // About Section
 .about_wrapper {
-    height: 80vh;
     background-color: $secondaryBackground;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 6%;
+    padding: 6% 0;
     @include laptopLarge {
-        height: 70vh;
+
     }
     @include laptop{
-        height: 70vh;
     }
     @include tablet {
-        height: 70vh;
     }
 
     h1 {
@@ -272,17 +282,17 @@ body {
         width: 48%;
         height: 50%;
         opacity: .1;
-        top: 145%;
+        top: 125%;
         left: 51%;
         z-index: 0;
         @include laptopLarge {
-            top: 128%;
+            top: 120%;
         }
         @include laptop {
-            top: 138%;
+            top: 120%;
         }
         @include tablet {
-            top: 130%;
+            top: 120%;
         }
     }
 }
@@ -314,7 +324,7 @@ body {
                 font-size: 3em;
             }
             @include tablet {
-                font-size: 2em;
+                font-size: 3em;
             }
         }
 
@@ -336,7 +346,7 @@ body {
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.5em;
+                font-size: 1.8em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -371,7 +381,7 @@ body {
                 font-size: 3em;
             }
             @include tablet {
-                font-size: 2em;
+                font-size: 3em;
             }
         }
 
@@ -393,7 +403,7 @@ body {
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.5em;
+                font-size: 1.8em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -425,7 +435,7 @@ body {
                 font-size: 3em;
             }
             @include tablet {
-                font-size: 2em;
+                font-size: 3em;
             }
         }
 
@@ -447,7 +457,7 @@ body {
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.5em;
+                font-size: 1.8em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -479,7 +489,7 @@ body {
                 font-size: 3em;
             }
             @include tablet {
-                font-size: 2em;
+                font-size: 3em;
             }
         }
 
@@ -501,7 +511,7 @@ body {
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.5em;
+                font-size: 1.8em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -516,18 +526,9 @@ body {
 // Testimonial Section
 .testimonials_wrapper {
     background-color: $secondaryBackground;
-    height: 50vh;
     display: flex;
     flex-direction: column;
-    @include laptopLarge {
-        height: 40vh;
-    }
-    @include laptop {
-        height: 35vh;
-    }
-    @include tablet {
-        height: 40vh;
-    }
+
 
     .testimonial_heading {
         flex: 1;
@@ -706,21 +707,7 @@ body {
 // Getting Started Section
 .get_started_wrapper {
     text-align: center;
-    height: 50vh;
-    @include laptopLarge {
-        margin: 5em 0;
-        height: 40vh;
-        margin-bottom: 0;
-        margin-top: 8em;
-    }
-    @include laptop {
-        margin: 3em 0;
-        height: 35vh;
-    }
-    @include tablet {
-        margin: 5em 0;
-        height: 25vh;
-    }
+    margin: 3em 0;
 
 
     .get_started_header{
@@ -728,7 +715,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        margin: -3em;
+
 
         h1 {
             @include pageHeading;
@@ -750,15 +737,8 @@ body {
 
     p {
         @include heroDescription;
-        margin: 2em;
-        @include laptop {
-            font-size: 1.25em;
-            margin: 2em;
-        }
-        @include tablet {
-            font-size: 1.25em;
-            margin: 2em;
-        }
+        margin: 1em;
+        font-size: 2em;
     }
 
     button {
