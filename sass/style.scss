@@ -120,8 +120,8 @@ body {
         background-color: transparent;
     }
     @include smartphoneLarge {
-        background-image: url(../assets/images/tablet_hero.png);
-        background-size: contain;
+        background-image: url(../assets/images/hero_image_opacity_mobile.png);
+        background-size: cover;
         background-color: transparent;
     }
 }
@@ -145,6 +145,7 @@ body {
         width: 50%;
     }
     @include smartphoneLarge {
+        margin-left: 0;
         text-align: center;
         margin-top: 1em;
         width: 50%;
@@ -166,6 +167,8 @@ body {
         }
         @include smartphoneLarge {
             font-size: 2.5em;
+            width: 90%;
+            margin: 0 auto;
             color: $secondaryHeading;
         }
     }
@@ -187,6 +190,8 @@ body {
         }
         @include smartphoneLarge {
             color: $secondaryHeading;
+            font-size: 1.25em;
+            margin: 3em 0;
         }
     }
 
@@ -201,6 +206,11 @@ body {
         @include tablet {
             width: 70%;
             font-size: 1.5em;
+            padding: .8em 3em;
+        }
+        @include smartphoneLarge {
+            width: 70%;
+            font-size: 1em;
             padding: .8em 3em;
         }
     }
@@ -242,13 +252,7 @@ body {
     flex-direction: column;
     text-align: center;
     padding: 6% 0;
-    @include laptopLarge {
-
-    }
-    @include laptop{
-    }
-    @include tablet {
-    }
+    margin: 0 auto;
 
     h1 {
         @include pageHeading;
@@ -260,6 +264,9 @@ body {
         }
         @include tablet {
             font-size: 3em;
+        }
+        @include smartphoneLarge {
+            font-size: 2.5em;
         }
     }
 
@@ -274,6 +281,9 @@ body {
         }
         @include tablet {
             font-size: 1.5em;
+        }
+        @include smartphoneLarge {
+            font-size: 1.25em;
         }
     }
 
@@ -294,19 +304,25 @@ body {
         @include tablet {
             top: 120%;
         }
+        @include smartphoneLarge {
+            display: none;
+        }
     }
 }
 
 // Services Section
 
 .services_wrapper {
-    height: 200vh;
+    @include smartphoneLarge {
+        height: auto;
+    }
 }
 
 .row_one {
         display: flex;
-        height: 50vh;
-    
+        @include smartphoneLarge {
+            flex-direction: column;            
+        }   
 
     .service_description {
         flex: 1;
@@ -325,6 +341,9 @@ body {
             }
             @include tablet {
                 font-size: 3em;
+            }
+            @include smartphoneLarge {
+                font-size: 2.5em;
             }
         }
 
@@ -347,6 +366,11 @@ body {
             }
             @include tablet {
                 font-size: 1.8em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
+            @include smartphoneLarge {
+                font-size: 1.25em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -355,12 +379,18 @@ body {
 
     .service_image {
         flex: 1;
+
+        @include smartphoneLarge {
+            margin: -4px;
+        }
     }
 }
 
 .row_two {
     display: flex;
-    height: 50vh;
+    @include smartphoneLarge {
+        flex-direction: column-reverse;            
+    }  
 
     .service_description {
         flex: 1;
@@ -382,6 +412,9 @@ body {
             }
             @include tablet {
                 font-size: 3em;
+            }
+            @include smartphoneLarge {
+                font-size: 2.5em;
             }
         }
 
@@ -407,17 +440,28 @@ body {
                 width: 70%;
                 padding-bottom: 3em;
             }
+            @include smartphoneLarge {
+                font-size: 1.25em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
         }
 }
 
 .service_image {
     flex: 1;
+
+    @include smartphoneLarge {
+        margin: -4px;
+    }
 }
 }
 
 .row_three {
     display: flex;
-    height: 50vh;
+    @include smartphoneLarge {
+        flex-direction: column;            
+    }  
 
     .service_description {
         flex: 1;
@@ -436,6 +480,9 @@ body {
             }
             @include tablet {
                 font-size: 3em;
+            }
+            @include smartphoneLarge {
+                font-size: 2.5em;
             }
         }
 
@@ -461,17 +508,28 @@ body {
                 width: 70%;
                 padding-bottom: 3em;
             }
+            @include smartphoneLarge {
+                font-size: 1.25em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
         }
 }
 
 .service_image {
     flex: 1;
+
+    @include smartphoneLarge {
+        margin: -4px;
+    }
 }
 }
 
 .row_four {
     display: flex;
-    height: 50vh;
+    @include smartphoneLarge {
+        flex-direction: column-reverse;            
+    }   
 
     .service_description {
         flex: 1;
@@ -490,6 +548,9 @@ body {
             }
             @include tablet {
                 font-size: 3em;
+            }
+            @include smartphoneLarge {
+                font-size: 2.5em;
             }
         }
 
@@ -512,6 +573,11 @@ body {
             }
             @include tablet {
                 font-size: 1.8em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
+            @include smartphoneLarge {
+                font-size: 1.25em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -536,6 +602,11 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        @include smartphoneLarge {
+            img {
+                display: none;
+            }
+        }
         
         h1 {
             @include pageHeading;
@@ -550,6 +621,11 @@ body {
             @include tablet {
                 text-align: center;
                 font-size: 2em;
+            }
+            @include smartphoneLarge {
+                text-align: center;
+                font-size: 2.5em;
+                width: 90%;
             }
 
             span {
@@ -575,6 +651,12 @@ body {
                 margin: -2em 0 0 3em;
                 opacity: 0.9;
             }
+            @include smartphoneLarge {
+                height: 100px;
+                width: 100px;
+                margin: -2em 0 0 1em;
+                opacity: 0.9;
+            }
         }
 
         p {
@@ -592,6 +674,10 @@ body {
             @include tablet{
                 font-size: 1.5em;
                 width: 85%;
+            }
+            @include smartphoneLarge{
+                font-size: 1.25em;
+                width: 90%;
             }
         }
 
@@ -617,6 +703,9 @@ body {
         @include tablet {
             font-size: 2em;
         }
+        @include smartphoneLarge {
+            font-size: 2.5em;
+        }
 
         span {
             color: $accent;
@@ -632,6 +721,10 @@ body {
         div {
             @include tablet {
                 width: 50%;
+            }
+            @include smartphoneLarge {
+                width: 100%;
+                margin: 1em;
             }
 
             .magic {
@@ -658,6 +751,9 @@ body {
             @include tablet {
                 font-size: 1.5em;
             }
+            @include smartphoneLarge {
+                font-size: 1.25em;
+            }
         }
 
         img {
@@ -672,6 +768,10 @@ body {
             @include tablet {
                 height: 100px;
                 width: 100px;
+            }
+            @include smartphoneLarge {
+                height: 80px;
+                width: 80px;
             }
         }
     }
@@ -694,6 +794,9 @@ body {
         @include tablet{
             font-size: 2em;
         }
+        @include smartphoneLarge{
+            font-size: 2.5em;
+        }
     }
 
     .carousel {
@@ -715,6 +818,11 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        @include smartphoneLarge {
+            img {
+                display: none;
+            }
+        }
 
 
         h1 {
@@ -728,6 +836,9 @@ body {
             @include tablet {
                 font-size: 2em;
             }
+            @include smartphoneLarge {
+                font-size: 2.5em;
+            }
 
             span {
                 color: $accent;
@@ -739,6 +850,9 @@ body {
         @include heroDescription;
         margin: 1em;
         font-size: 2em;
+        @include smartphoneLarge {
+            font-size: 1.25em;
+        }
     }
 
     button {
@@ -750,6 +864,10 @@ body {
         }
         @include tablet {
             font-size: 1.5em;
+        }
+        @include smartphoneLarge {
+            font-size: 1.25em;
+            padding: .5em 1em;
         }
     }
 }
@@ -777,6 +895,10 @@ body {
         @include tablet {
             width: 50%;
         }
+        @include smartphoneLarge {
+            width: 100%;
+            justify-content: space-evenly;
+        }
     }
 
     .footer_socials {
@@ -795,6 +917,10 @@ body {
         }
         @include tablet {
             width: 20%;
+        }
+        @include smartphoneLarge {
+            width: 70%;
+            justify-content: space-evenly;
         }
     }
 
