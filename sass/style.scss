@@ -1,6 +1,7 @@
 // Importing font 'Roboto' thin and medium from Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
+
 // SASS Partial Files
 @import 'partials/typography';
 @import 'partials/colours';
@@ -28,6 +29,9 @@ body {
         @include tablet {
             flex: 0;
         }
+        @include smartphoneLarge {
+            flex: 0;
+        }
     }
 
     .nav_links {
@@ -42,6 +46,9 @@ body {
             flex: .9;
         }
         @include tablet {
+            flex: 1;
+        }
+        @include smartphoneLarge {
             flex: 1;
         }
     }
@@ -65,6 +72,11 @@ body {
                 justify-content: space-evenly;
                 text-align: center;
             }
+            @include smartphoneLarge {
+                flex-basis: 25%;
+                justify-content: space-evenly;
+                text-align: center;
+            }
             
             a {
                 color: $heroHeading;
@@ -74,6 +86,9 @@ body {
                     font-size: 1.2em;
                 }
                 @include tablet {
+                    font-size: 1.2em;
+                }
+                @include smartphoneLarge {
                     font-size: 1.2em;
                 }
 
@@ -97,6 +112,11 @@ body {
         background-size: cover;
         background-color: transparent;
     }
+    @include smartphoneLarge {
+        background-image: url(../assets/images/tablet_hero.png);
+        background-size: contain;
+        background-color: transparent;
+    }
 }
 
 .hero_left {
@@ -113,6 +133,11 @@ body {
         margin-top: 0em;
         width: 50%;
     }
+    @include smartphoneLarge {
+        text-align: center;
+        margin-top: 1em;
+        width: 50%;
+    }
 
     h1 {
         @include heroHeading;
@@ -124,6 +149,11 @@ body {
         }
         @include tablet {
             font-size: 3.5em;
+            color: $secondaryHeading;
+            width: 90%
+        }
+        @include smartphoneLarge {
+            font-size: 2.5em;
             color: $secondaryHeading;
             width: 90%
         }
@@ -142,6 +172,10 @@ body {
             font-size: 1.25em;
         }
         @include tablet {
+            color: $secondaryHeading;
+            margin: 70px 50px 70px 0px;
+        }
+        @include smartphoneLarge {
             color: $secondaryHeading;
             margin: 70px 50px 70px 0px;
         }
@@ -166,6 +200,9 @@ body {
     flex: 1;
     height: 120vh;
     @include tablet {
+        display: none;
+    }
+    @include smartphoneLarge {
         display: none;
     }
 
@@ -239,7 +276,7 @@ body {
         left: 51%;
         z-index: 0;
         @include laptopLarge {
-            top: 135%;
+            top: 128%;
         }
         @include laptop {
             top: 138%;
@@ -271,7 +308,7 @@ body {
             @include serviceHeading;
             flex: 1;
             @include laptopLarge {
-                font-size: 3em;
+                font-size: 4em;
             }
             @include laptop {
                 font-size: 3em;
@@ -289,7 +326,7 @@ body {
             text-align: center;
             width: 70%;
             @include laptopLarge {
-                font-size: 1.75em;
+                font-size: 2em;
                 width: 60%;
                 padding-bottom: 2.5em;
             }
@@ -325,7 +362,7 @@ body {
             @include serviceHeading;
             flex: 1;
             @include laptopLarge {
-                font-size: 3em;
+                font-size: 4em;
             }
             @include laptop {
                 font-size: 3em;
@@ -346,7 +383,7 @@ body {
             text-align: center;
             width: 70%;
             @include laptopLarge {
-                font-size: 1.75em;
+                font-size: 2em;
                 width: 60%;
                 padding-bottom: 2.5em;
             }
@@ -382,7 +419,7 @@ body {
             @include serviceHeading;
             flex: 1;
             @include laptopLarge {
-                font-size: 3em;
+                font-size: 4em;
             }
             @include laptop {
                 font-size: 3em;
@@ -400,7 +437,7 @@ body {
             text-align: center;
             width: 70%;
             @include laptopLarge {
-                font-size: 1.75em;
+                font-size: 2em;
                 width: 60%;
                 padding-bottom: 2.5em;
             }
@@ -436,7 +473,7 @@ body {
             @include serviceHeading;
             flex: 1;
             @include laptopLarge {
-                font-size: 3em;
+                font-size: 4em;
             }
             @include laptop {
                 font-size: 3em;
@@ -454,7 +491,7 @@ body {
             text-align: center;
             width: 70%;
             @include laptopLarge {
-                font-size: 1.75em;
+                font-size: 2em;
                 width: 60%;
                 padding-bottom: 2.5em;
             }
@@ -671,8 +708,10 @@ body {
     text-align: center;
     height: 50vh;
     @include laptopLarge {
-        margin: 3em 0;
+        margin: 5em 0;
         height: 40vh;
+        margin-bottom: 0;
+        margin-top: 8em;
     }
     @include laptop {
         margin: 3em 0;
@@ -689,7 +728,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        margin: -2em;
+        margin: -3em;
 
         h1 {
             @include pageHeading;
@@ -711,7 +750,7 @@ body {
 
     p {
         @include heroDescription;
-        margin: 1em;
+        margin: 2em;
         @include laptop {
             font-size: 1.25em;
             margin: 2em;
