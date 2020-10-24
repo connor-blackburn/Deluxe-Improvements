@@ -35,6 +35,9 @@ body {
         @include smartphoneMedium {
             flex: 0;
         }
+        @include smartphone {
+            flex: 0;
+        }
     }
 
     .nav_links {
@@ -57,6 +60,9 @@ body {
         @include smartphoneMedium {
             flex: 1;
         }
+        @include smartphone {
+            flex: 1;
+        }
     }
 
     .nav_links ul {
@@ -71,6 +77,9 @@ body {
             padding: 0;
         }
         @include smartphoneMedium {
+            padding: 0;
+        }
+        @include smartphone {
             padding: 0;
         }
 
@@ -99,6 +108,12 @@ body {
                 text-align: center;
                 padding: 0;
             }
+            @include smartphone {
+                flex-basis: 25%;
+                justify-content: space-evenly;
+                text-align: center;
+                padding: 0;
+            }
             
             a {
                 color: $heroHeading;
@@ -115,6 +130,9 @@ body {
                 }
                 @include smartphoneMedium {
                     font-size: 1.2em;
+                }
+                @include smartphone {
+                    font-size: 1em;
                 }
 
                 &:hover {
@@ -152,6 +170,11 @@ body {
         background-size: cover;
         background-color: transparent;
     }
+    @include smartphone {
+        background-image: url(../assets/images/hero_image_opacity_mobile.png);
+        background-size: cover;
+        background-color: transparent;
+    }
 }
 
 .hero_left {
@@ -184,6 +207,12 @@ body {
         margin-top: 1em;
         width: 50%;
     }
+    @include smartphone {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 1em;
+        width: 50%;
+    }
 
     h1 {
         @include heroHeading;
@@ -206,6 +235,12 @@ body {
             color: $secondaryHeading;
         }
         @include smartphoneMedium {
+            font-size: 2em;
+            width: 90%;
+            margin: 0 auto;
+            color: $secondaryHeading;
+        }
+        @include smartphone {
             font-size: 2em;
             width: 90%;
             margin: 0 auto;
@@ -237,7 +272,11 @@ body {
             color: $secondaryHeading;
             font-size: 1.25em;
             margin: 3em .5em;
-            
+        }
+        @include smartphone {
+            color: $secondaryHeading;
+            font-size: 1em;
+            margin: 2em .5em;
         }
     }
 
@@ -265,6 +304,11 @@ body {
             font-size: 1em;
             padding: .8em 3em;
         }
+        @include smartphone {
+            width: 70%;
+            font-size: .8em;
+            padding: .8em 3em;
+        }
     }
 }
 
@@ -281,6 +325,9 @@ body {
         display: none;
     }
     @include smartphoneMedium {
+        display: none;
+    }
+    @include smartphone {
         display: none;
     }
 
@@ -326,6 +373,9 @@ body {
         @include smartphoneMedium {
             font-size: 2em;
         }
+        @include smartphone {
+            font-size: 2em;
+        }
     }
 
     p {
@@ -344,6 +394,9 @@ body {
             font-size: 1.25em;
         }
         @include smartphoneMedium {
+            font-size: 1em;
+        }
+        @include smartphone {
             font-size: 1em;
         }
     }
@@ -371,6 +424,9 @@ body {
         @include smartphoneMedium {
             display: none;
         }
+        @include smartphone {
+            display: none;
+        }
     }
 }
 
@@ -388,6 +444,9 @@ body {
             flex-direction: column;            
         }
         @include smartphoneMedium {
+            flex-direction: column;            
+        } 
+        @include smartphone {
             flex-direction: column;            
         } 
 
@@ -415,6 +474,9 @@ body {
             @include smartphoneMedium {
                 font-size: 2em;
             }
+            @include smartphone {
+                font-size: 2em;
+            }
         }
 
         p {
@@ -445,6 +507,11 @@ body {
                 padding-bottom: 3em;
             }
             @include smartphoneMedium {
+                font-size: 1em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
+            @include smartphone {
                 font-size: 1em;
                 width: 70%;
                 padding-bottom: 3em;
@@ -461,6 +528,9 @@ body {
         @include smartphoneMedium {
             margin: -4px;
         }
+        @include smartphone {
+            margin: -4px;
+        }
     }
 }
 
@@ -470,6 +540,9 @@ body {
         flex-direction: column-reverse;            
     }
     @include smartphoneMedium {
+        flex-direction: column-reverse;            
+    }
+    @include smartphone {
         flex-direction: column-reverse;            
     }  
 
@@ -498,7 +571,10 @@ body {
                 font-size: 2.5em;
             }
             @include smartphoneMedium {
-                font-size: 2.5em;
+                font-size: 2em;
+            }
+            @include smartphone {
+                font-size: 2em;
             }
         }
 
@@ -534,6 +610,11 @@ body {
                 width: 70%;
                 padding-bottom: 3em;
             }
+            @include smartphone {
+                font-size: 1em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
         }
 }
 
@@ -544,6 +625,9 @@ body {
         margin: -4px;
     }
     @include smartphoneMedium {
+        margin: -4px;
+    }
+    @include smartphone {
         margin: -4px;
     }
 }
@@ -556,6 +640,9 @@ body {
     }
     @include smartphoneMedium {
         flex-direction: column;            
+    }
+    @include smartphone {
+        flex-direction: column;            
     }  
 
     .service_description {
@@ -580,6 +667,9 @@ body {
                 font-size: 2.5em;
             }
             @include smartphoneMedium {
+                font-size: 2em;
+            }
+            @include smartphone {
                 font-size: 2em;
             }
         }
@@ -616,6 +706,11 @@ body {
                 width: 70%;
                 padding-bottom: 3em;
             }
+            @include smartphone {
+                font-size: 1em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
         }
 }
 
@@ -628,6 +723,9 @@ body {
     @include smartphoneMedium {
         margin: -4px;
     }
+    @include smartphone {
+        margin: -4px;
+    }
 }
 }
 
@@ -637,6 +735,9 @@ body {
         flex-direction: column-reverse;            
     }
     @include smartphoneMedium {
+        flex-direction: column-reverse;            
+    }
+    @include smartphone {
         flex-direction: column-reverse;            
     }   
 
@@ -664,6 +765,9 @@ body {
             @include smartphoneMedium {
                 font-size: 2em;
             }
+            @include smartphone {
+                font-size: 2em;
+            }
         }
 
         p {
@@ -694,6 +798,11 @@ body {
                 padding-bottom: 3em;
             }
             @include smartphoneMedium {
+                font-size: 1em;
+                width: 70%;
+                padding-bottom: 3em;
+            }
+            @include smartphone {
                 font-size: 1em;
                 width: 70%;
                 padding-bottom: 3em;
@@ -729,6 +838,11 @@ body {
                 display: none;
             }
         }
+        @include smartphone {
+            img {
+                display: none;
+            }
+        }
         
         h1 {
             @include pageHeading;
@@ -750,6 +864,11 @@ body {
                 width: 90%;
             }
             @include smartphoneMedium {
+                text-align: center;
+                font-size: 2em;
+                width: 90%;
+            }
+            @include smartphone {
                 text-align: center;
                 font-size: 2em;
                 width: 90%;
@@ -790,6 +909,12 @@ body {
                 margin: -2em 0 0 1em;
                 opacity: 0.9;
             }
+            @include smartphone {
+                height: 100px;
+                width: 100px;
+                margin: -2em 0 0 1em;
+                opacity: 0.9;
+            }
         }
 
         p {
@@ -813,6 +938,10 @@ body {
                 width: 90%;
             }
             @include smartphoneMedium{
+                font-size: 1.25em;
+                width: 90%;
+            }
+            @include smartphone{
                 font-size: 1.25em;
                 width: 90%;
             }
@@ -844,7 +973,10 @@ body {
             font-size: 2.5em;
         }
         @include smartphoneMedium {
-            font-size: 2.5em;
+            font-size: 2em;
+        }
+        @include smartphone {
+            font-size: 2em;
         }
 
         span {
@@ -867,6 +999,10 @@ body {
                 margin: 1em;
             }
             @include smartphoneMedium {
+                width: 100%;
+                margin: 1em;
+            }
+            @include smartphone {
                 width: 100%;
                 margin: 1em;
             }
@@ -901,6 +1037,9 @@ body {
             @include smartphoneMedium {
                 font-size: 1em;
             }
+            @include smartphone {
+                font-size: 1em;
+            }
         }
 
         img {
@@ -921,6 +1060,10 @@ body {
                 width: 80px;
             }
             @include smartphoneMedium {
+                height: 80px;
+                width: 80px;
+            }
+            @include smartphone {
                 height: 80px;
                 width: 80px;
             }
@@ -950,6 +1093,9 @@ body {
             font-size: 2.5em;
         }
         @include smartphoneMedium{
+            font-size: 2em;
+        }
+        @include smartphone{
             font-size: 2em;
         }
     }
@@ -983,6 +1129,11 @@ body {
                 display: none;
             }
         }
+        @include smartphone {
+            img {
+                display: none;
+            }
+        }
 
 
         h1 {
@@ -1003,6 +1154,10 @@ body {
                 font-size: 2em;
                 width: 90%;
             }
+            @include smartphone {
+                font-size: 2em;
+                width: 90%;
+            }
 
             span {
                 color: $accent;
@@ -1018,6 +1173,9 @@ body {
             font-size: 1.25em;
         }
         @include smartphoneMedium {
+            font-size: 1em;
+        }
+        @include smartphone {
             font-size: 1em;
         }
     }
@@ -1038,6 +1196,10 @@ body {
         }
         @include smartphoneMedium {
             font-size: 1.25em;
+            padding: .5em 1em;
+        }
+        @include smartphone {
+            font-size: 1em;
             padding: .5em 1em;
         }
     }
@@ -1074,6 +1236,10 @@ body {
             width: 100%;
             justify-content: space-evenly;
         }
+        @include smartphone {
+            width: 100%;
+            justify-content: space-evenly;
+        }
     }
 
     .footer_socials {
@@ -1098,6 +1264,10 @@ body {
             justify-content: space-evenly;
         }
         @include smartphoneMedium {
+            width: 70%;
+            justify-content: space-evenly;
+        }
+        @include smartphone {
             width: 70%;
             justify-content: space-evenly;
         }
