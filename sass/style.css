@@ -400,7 +400,7 @@ body {
   .hero_left p {
     color: #000000;
     font-size: 1.25em;
-    margin: 3em 0;
+    margin: 3em .5em;
   }
 }
 
