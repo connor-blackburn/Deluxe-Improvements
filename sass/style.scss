@@ -199,13 +199,13 @@ body {
     @include smartphoneLarge {
         margin-left: 0;
         text-align: center;
-        margin-top: 1em;
+        margin-top: -2em;
         width: 50%;
     }
     @include smartphoneMedium {
         margin-left: 0;
         text-align: center;
-        margin-top: -1em;
+        margin-top: -2em;
         width: 50%;
     }
     @include smartphone {
@@ -221,7 +221,7 @@ body {
             font-size: 3.5em;
         }
         @include laptop {
-            font-size: 4em;
+            font-size: 3em;
             color: $secondaryHeading;
         }
         @include tablet {
@@ -230,7 +230,7 @@ body {
       
         }
         @include smartphoneLarge {
-            font-size: 2.5em;
+            font-size: 2em;
             width: 90%;
             margin: 0 auto;
             color: $secondaryHeading;
@@ -260,6 +260,7 @@ body {
         }
         @include laptop {
             color: $secondaryHeading;
+            font-size: 1.5em;
         }
         @include tablet {
             color: $secondaryHeading;
@@ -267,7 +268,7 @@ body {
         @include smartphoneLarge {
             color: $secondaryHeading;
             font-size: 1.25em;
-            margin: 3em 0;
+            margin: 2em 0;
         }
         @include smartphoneMedium {
             color: $secondaryHeading;
@@ -286,9 +287,9 @@ body {
         @include heroButton;
         cursor: pointer;
         @include laptop {
-            width: 80%;
-            font-size: 1.5em;
-            padding: .8em 3em;
+            width: 60%;
+            font-size: 1em;
+            padding: .8em 2em;
         }
         @include tablet {
             width: 70%;
@@ -1189,19 +1190,20 @@ body {
             font-size: 1.5em;
         }
         @include tablet {
-            font-size: 1.5em;
+            font-size: 1.2em;
+            padding: .8em 5em;
         }
         @include smartphoneLarge {
-            font-size: 1.25em;
-            padding: .5em 1em;
+            font-size: 1em;
+            padding: .8em 3em;
         }
         @include smartphoneMedium {
-            font-size: 1.25em;
-            padding: .5em 1em;
+            font-size: 1em;
+            padding: .8em 3em;
         }
         @include smartphone {
-            font-size: 1em;
-            padding: .5em 1em;
+            font-size: .8em;
+            padding: .8em 3em;
         }
     }
 }

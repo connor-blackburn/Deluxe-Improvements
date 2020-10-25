@@ -347,7 +347,7 @@ body {
   .hero_left {
     margin-left: 0;
     text-align: center;
-    margin-top: 1em;
+    margin-top: -2em;
     width: 50%;
   }
 }
@@ -356,7 +356,7 @@ body {
   .hero_left {
     margin-left: 0;
     text-align: center;
-    margin-top: -1em;
+    margin-top: -2em;
     width: 50%;
   }
 }
@@ -386,7 +386,7 @@ body {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero_left h1 {
-    font-size: 4em;
+    font-size: 3em;
     color: #000000;
   }
 }
@@ -400,7 +400,7 @@ body {
 
 @media (min-width: 376px) and (max-width: 425px) {
   .hero_left h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     width: 90%;
     margin: 0 auto;
     color: #000000;
@@ -446,6 +446,7 @@ body {
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero_left p {
     color: #000000;
+    font-size: 1.5em;
   }
 }
 
@@ -459,7 +460,7 @@ body {
   .hero_left p {
     color: #000000;
     font-size: 1.25em;
-    margin: 3em 0;
+    margin: 2em 0;
   }
 }
 
@@ -490,9 +491,9 @@ body {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero_left button {
-    width: 80%;
-    font-size: 1.5em;
-    padding: .8em 3em;
+    width: 60%;
+    font-size: 1em;
+    padding: .8em 2em;
   }
 }
 
@@ -2045,28 +2046,29 @@ body {
 
 @media (min-width: 426px) and (max-width: 768px) {
   .get_started_wrapper button {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    padding: .8em 5em;
   }
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
   .get_started_wrapper button {
-    font-size: 1.25em;
-    padding: .5em 1em;
+    font-size: 1em;
+    padding: .8em 3em;
   }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
   .get_started_wrapper button {
-    font-size: 1.25em;
-    padding: .5em 1em;
+    font-size: 1em;
+    padding: .8em 3em;
   }
 }
 
 @media (max-width: 320px) {
   .get_started_wrapper button {
-    font-size: 1em;
-    padding: .5em 1em;
+    font-size: .8em;
+    padding: .8em 3em;
   }
 }
 
