@@ -112,6 +112,7 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    padding: .5em 0;
   }
 }
 
@@ -250,7 +251,7 @@ body {
 
 @media (max-width: 320px) {
   .nav_wrapper .nav_links ul li a {
-    font-size: 1em;
+    font-size: .8em;
   }
 }
 
@@ -364,8 +365,8 @@ body {
   .hero_left {
     margin-left: 0;
     text-align: center;
-    margin-top: 1em;
     width: 50%;
+    margin-top: -3em;
   }
 }
 
@@ -417,8 +418,8 @@ body {
 
 @media (max-width: 320px) {
   .hero_left h1 {
-    font-size: 2em;
-    width: 90%;
+    font-size: 1.5em;
+    width: 100%;
     margin: 0 auto;
     color: #000000;
   }
