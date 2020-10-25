@@ -245,7 +245,7 @@ body {
 
 @media (min-width: 321px) and (max-width: 375px) {
   .nav_wrapper .nav_links ul li a {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
@@ -356,7 +356,7 @@ body {
   .hero_left {
     margin-left: 0;
     text-align: center;
-    margin-top: 1em;
+    margin-top: -1em;
     width: 50%;
   }
 }
@@ -467,7 +467,7 @@ body {
   .hero_left p {
     color: #000000;
     font-size: 1.25em;
-    margin: 3em .5em;
+    margin: 2em .5em;
   }
 }
 
