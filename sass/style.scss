@@ -26,17 +26,50 @@ body {
 
     .nav_logo {
         flex: 1;
+        img {
+            position: absolute;
+            left: 10em;
+            height: 155px;
+            width: 241;
+        }
+        @include laptop {
+            flex: 0;
+            img {
+                display: none;
+            }
+        }
         @include tablet {
             flex: 0;
+            img {
+                display: none;
+            }
         }
         @include smartphoneLarge {
             flex: 0;
+            img {
+                position: absolute;
+                left: 28%;
+                top: 15%;
+                height: 100px;
+            }
         }
         @include smartphoneMedium {
             flex: 0;
+            img {
+                position: absolute;
+                left: 30%;
+                top: 15%;
+                height: 80px;
+            }
         }
         @include smartphone {
             flex: 0;
+            img {
+                position: absolute;
+                left: 27%;
+                top: 15%;
+                height: 80px;
+            }
         }
     }
 
@@ -45,14 +78,40 @@ body {
         z-index: 1;
         background-color: $primaryBackground;
         padding: 1em 0;
+
+        .nav_logo_tablet {
+            display: none;
+        }
+
         @include laptopLarge {
             flex: 0.95
         }
         @include laptop {
-            flex: .9;
+            flex: 1;
+            .nav_logo_tablet {
+                display: inline;
+                height: 30px;
+                width: 130px;
+            }
+            li a img {
+                height: 70px;
+                margin-top: -1em;
+            }
         }
         @include tablet {
             flex: 1;
+            .nav_logo_tablet {
+                display: inline;
+                height: 30px;
+                width: 130px;
+            }
+            li a img {
+                height: 70px;
+                margin-top: -1em;
+            }
+            .nav_logo {
+                display: none;
+            }
         }
         @include smartphoneLarge {
             flex: 1;
@@ -73,7 +132,13 @@ body {
         color: $heroHeading;
         flex-basis: 20%;
         justify-content: space-evenly;
-
+        @include laptop {
+            flex: 1;
+            text-align: center;
+        }
+        @include tablet {
+            padding: 0;
+        }
         @include smartphoneLarge {
             padding: 0;
         }

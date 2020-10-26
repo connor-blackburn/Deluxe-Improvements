@@ -26,11 +26,32 @@ body {
           flex: 1;
 }
 
+.nav_wrapper .nav_logo img {
+  position: absolute;
+  left: 10em;
+  height: 155px;
+  width: 241;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav_wrapper .nav_logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+  .nav_wrapper .nav_logo img {
+    display: none;
+  }
+}
+
 @media (min-width: 426px) and (max-width: 768px) {
   .nav_wrapper .nav_logo {
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
+  }
+  .nav_wrapper .nav_logo img {
+    display: none;
   }
 }
 
@@ -40,6 +61,12 @@ body {
         -ms-flex: 0;
             flex: 0;
   }
+  .nav_wrapper .nav_logo img {
+    position: absolute;
+    left: 28%;
+    top: 15%;
+    height: 100px;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
@@ -48,6 +75,12 @@ body {
         -ms-flex: 0;
             flex: 0;
   }
+  .nav_wrapper .nav_logo img {
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    height: 80px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -55,6 +88,12 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
+  }
+  .nav_wrapper .nav_logo img {
+    position: absolute;
+    left: 27%;
+    top: 15%;
+    height: 80px;
   }
 }
 
@@ -67,6 +106,10 @@ body {
   padding: 1em 0;
 }
 
+.nav_wrapper .nav_links .nav_logo_tablet {
+  display: none;
+}
+
 @media (min-width: 1025px) and (max-width: 1440px) {
   .nav_wrapper .nav_links {
     -webkit-box-flex: 0.95;
@@ -77,9 +120,18 @@ body {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav_wrapper .nav_links {
-    -webkit-box-flex: .9;
-        -ms-flex: .9;
-            flex: .9;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .nav_wrapper .nav_links .nav_logo_tablet {
+    display: inline;
+    height: 30px;
+    width: 130px;
+  }
+  .nav_wrapper .nav_links li a img {
+    height: 70px;
+    margin-top: -1em;
   }
 }
 
@@ -88,6 +140,18 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .nav_wrapper .nav_links .nav_logo_tablet {
+    display: inline;
+    height: 30px;
+    width: 130px;
+  }
+  .nav_wrapper .nav_links li a img {
+    height: 70px;
+    margin-top: -1em;
+  }
+  .nav_wrapper .nav_links .nav_logo {
+    display: none;
   }
 }
 
@@ -131,6 +195,21 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav_wrapper .nav_links ul {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .nav_wrapper .nav_links ul {
+    padding: 0;
+  }
 }
 
 @media (min-width: 376px) and (max-width: 425px) {
