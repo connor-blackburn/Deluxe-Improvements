@@ -92,9 +92,9 @@ body {
   }
   .nav_wrapper .nav_logo img {
     position: absolute;
-    left: 27%;
+    left: 35%;
     top: 15%;
-    height: 80px;
+    height: 60px;
   }
 }
 
