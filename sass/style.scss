@@ -135,6 +135,7 @@ body {
         @include laptop {
             flex: 1;
             text-align: center;
+            padding: 0;
         }
         @include tablet {
             padding: 0;
