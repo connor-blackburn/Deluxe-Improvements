@@ -1029,13 +1029,13 @@ body {
 // Portfolio Section
 .portfolio_wrapper {
     text-align: center;
-    width: 70%;
     margin: 0 auto;
-    font-size: 3em;
-    padding: 1em 0;
+
 
     h1 {
         @include pageHeading;
+        font-size: 3em;
+        padding: 1em 0;
         @include laptopLarge {
             font-size: 3em;
             padding: 1em 0;
@@ -1045,11 +1045,11 @@ body {
             padding: 1em 0;
         }
         @include tablet{
-            font-size: 2em;
+            font-size: 2.5em;
             padding: 1em 0;
         }
         @include smartphoneLarge{
-            font-size: 2.5em;
+            font-size: 2em;
             padding: 1em 0;
         }
         @include smartphoneMedium{
