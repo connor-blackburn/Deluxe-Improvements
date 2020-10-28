@@ -19,203 +19,17 @@ body {
     overflow-x: hidden;
 }
 
-// Navigation
-.nav_wrapper {
-    display: flex;
-    flex-direction: row;
-    background-color: $primaryBackground;
 
-    .nav_logo {
-        flex: 1;
-        img {
-            position: absolute;
-            left: 10em;
-            height: 155px;
-            width: 241;
-        }
-        @include laptop {
-            flex: 0;
-            img {
-                display: none;
-            }
-        }
-        @include tablet {
-            flex: 0;
-            img {
-                display: none;
-            }
-        }
-        @include smartphoneLarge {
-            flex: 0;
-            img {
-                position: absolute;
-                left: 28%;
-                top: 15%;
-                height: 100px;
-            }
-        }
-        @include smartphoneMedium {
-            flex: 0;
-            img {
-                position: absolute;
-                left: 35%;
-                top: 15%;
-                height: 60px;
-            }
-        }
-        @include smartphone {
-            flex: 0;
-            img {
-                position: absolute;
-                left: 35%;
-                top: 15%;
-                height: 60px;
-            }
-        }
-    }
+#navbar {
+    border-color: red !important;
+    margin-bottom: 10em;
 
-    .nav_links {
-        flex: 1;
-        z-index: 1;
-        background-color: $primaryBackground;
-        padding: 1em 0;
-
-        .nav_logo_tablet {
-            display: none;
-        }
-
-        @include laptopLarge {
-            flex: 0.95
-        }
-        @include laptop {
-            flex: 1;
-            .nav_logo_tablet {
-                display: inline;
-                height: 30px;
-                width: 130px;
-            }
-            li a img {
-                height: 70px;
-                margin-top: -1em;
-            }
-        }
-        @include tablet {
-            flex: 1;
-            .nav_logo_tablet {
-                display: inline;
-                height: 30px;
-                width: 130px;
-            }
-            li a img {
-                height: 70px;
-                margin-top: -1em;
-            }
-            .nav_logo {
-                display: none;
-            }
-        }
-        @include smartphoneLarge {
-            flex: 1;
-        }
-        @include smartphoneMedium {
-            flex: 1;
-        }
-        @include smartphone {
-            flex: 1;
-            padding: .5em 0;
-        }
-    }
-
-    .nav_links ul {
-        display: flex;
-        flex-direction: row;
-        text-decoration: none;
-        color: $heroHeading;
-        flex-basis: 20%;
-        justify-content: space-evenly;
-        @include laptop {
-            flex: 1;
-            text-align: center;
-            padding: 0;
-        }
-        @include tablet {
-            padding: 0;
-        }
-        @include smartphoneLarge {
-            padding: 0;
-        }
-        @include smartphoneMedium {
-            padding: 0;
-        }
-        @include smartphone {
-            padding: 0;
-        }
-
-        li {
-            color: $heroHeading;
-            list-style: none;
-            flex-basis: 20%;
-            @include laptop {
-                flex-basis: 25%;
-                justify-content: space-between;
-            }
-            @include tablet {
-                flex-basis: 25%;
-                justify-content: space-evenly;
-                text-align: center;
-            }
-            @include smartphoneLarge {
-                flex-basis: 25%;
-                justify-content: space-evenly;
-                text-align: center;
-                padding: 0;
-            }
-            @include smartphoneMedium {
-                flex-basis: 25%;
-                justify-content: space-evenly;
-                text-align: center;
-                padding: 0;
-            }
-            @include smartphone {
-                flex-basis: 25%;
-                justify-content: space-evenly;
-                text-align: center;
-                padding: 0;
-            }
-            
-            a {
-                color: $heroHeading;
-                text-decoration: none;
-                @include navLinks;
-                @include laptop {
-                    font-size: 1.2em;
-                }
-                @include tablet {
-                    font-size: 1.2em;
-                }
-                @include smartphoneLarge {
-                    font-size: 1.2em;
-                }
-                @include smartphoneMedium {
-                    font-size: 1em;
-                }
-                @include smartphone {
-                    font-size: .8em;
-                }
-
-                &:hover {
-                    color: $accent;
-                    transition: .3s;
-                }
-            }
-        }
-    }
 }
 
 // Hero Section
 .hero_wrapper {
     display: flex;
-    height: 90vh;
+    height: 100vh;
     align-items: center;
     background-color: $primaryBackground;
     @include laptop{
@@ -272,14 +86,14 @@ body {
     @include smartphoneMedium {
         margin-left: 0;
         text-align: center;
-        margin-top: -2em;
+        margin-top: -1em;
         width: 50%;
     }
     @include smartphone {
         margin-left: 0;
         text-align: center;
         width: 50%;
-        margin-top: -3em;
+        margin-top: 1em;
     }
 
     h1 {
@@ -288,11 +102,11 @@ body {
             font-size: 3.5em;
         }
         @include laptop {
-            font-size: 3em;
+            font-size: 4em;
             color: $secondaryHeading;
         }
         @include tablet {
-            font-size: 3.5em;
+            font-size: 2.5em;
             color: $secondaryHeading;
       
         }
@@ -327,10 +141,11 @@ body {
         }
         @include laptop {
             color: $secondaryHeading;
-            font-size: 1.5em;
+            font-size: 2em;
         }
         @include tablet {
             color: $secondaryHeading;
+            font-size: 1.5em;
         }
         @include smartphoneLarge {
             color: $secondaryHeading;
@@ -355,12 +170,12 @@ body {
         cursor: pointer;
         @include laptop {
             width: 60%;
-            font-size: 1em;
+            font-size: 1.2em;
             padding: .8em 2em;
         }
         @include tablet {
             width: 70%;
-            font-size: 1.5em;
+            font-size: 1.2em;
             padding: .8em 3em;
         }
         @include smartphoneLarge {
@@ -427,29 +242,40 @@ body {
 
     h1 {
         @include pageHeading;
+        font-size: 4em;
+        padding: 0 0 1em 0;
         @include laptopLarge {
             font-size: 3.5em;
+            padding: 1em 0;
         }
         @include laptop {
-            font-size: 3.5em;
+            font-size: 3em;
+            padding: 1em 0;
         }
         @include tablet {
-            font-size: 3em;
+            font-size: 2.5em;
+            padding: 1em 0;
         }
         @include smartphoneLarge {
             font-size: 2.5em;
+            padding: 1em 0;
         }
         @include smartphoneMedium {
             font-size: 2em;
+            padding: 1em 0;
         }
         @include smartphone {
             font-size: 2em;
+            padding: 1em 0;
         }
     }
 
     p {
         @include pageDescription;
-        margin: 2% 10%;
+        margin: 0 auto;
+        padding: 1em 0;
+        font-size: 2em;
+        width: 80%;
         @include laptopLarge {
             font-size: 1.75em;
         }
@@ -457,7 +283,7 @@ body {
             font-size: 1.5em;
         }
         @include tablet {
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
         @include smartphoneLarge {
             font-size: 1.25em;
@@ -528,30 +354,38 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            font-size: 4em;
+            padding: 1em 0 0 0;
             @include laptopLarge {
                 font-size: 4em;
+                padding: 1em 0;
             }
             @include laptop {
                 font-size: 3em;
+                padding: 1em 0;
             }
             @include tablet {
-                font-size: 3em;
+                font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneLarge {
                 font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneMedium {
                 font-size: 2em;
+                padding: 1em 0;
             }
             @include smartphone {
                 font-size: 2em;
+                padding: 1em 0;
             }
         }
 
         p {
             flex: 2;
             @include serviceDescription;
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0 auto;
             text-align: center;
             width: 70%;
@@ -561,12 +395,12 @@ body {
                 padding-bottom: 2.5em;
             }
             @include laptop {
-                font-size: 1.75em;
+                font-size: 1.5em;
                 width: 70%;
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.8em;
+                font-size: 1.2em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -624,33 +458,42 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            font-size: 4em;
+            padding: 1em 0 0 0;
             @include laptopLarge {
                 font-size: 4em;
+                padding: 1em 0;
             }
             @include laptop {
                 font-size: 3em;
+                padding: 1em 0;
             }
             @include laptop {
                 font-size: 3em;
+                padding: 1em 0;
             }
             @include tablet {
-                font-size: 3em;
+                font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneLarge {
                 font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneMedium {
                 font-size: 2em;
+                padding: 1em 0;
             }
             @include smartphone {
                 font-size: 2em;
+                padding: 1em 0;
             }
         }
 
         p {
             flex: 2;
             @include serviceDescription;
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0 auto;
             text-align: center;
             width: 70%;
@@ -660,12 +503,12 @@ body {
                 padding-bottom: 2.5em;
             }
             @include laptop {
-                font-size: 1.75em;
+                font-size: 1.5em;
                 width: 70%;
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.8em;
+                font-size: 1.2em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -723,30 +566,38 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            font-size: 4em;
+            padding: 1em 0 0 0;
             @include laptopLarge {
                 font-size: 4em;
+                padding: 1em 0;
             }
             @include laptop {
                 font-size: 3em;
+                padding: 1em 0;
             }
             @include tablet {
-                font-size: 3em;
+                font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneLarge {
                 font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneMedium {
                 font-size: 2em;
+                padding: 1em 0;
             }
             @include smartphone {
                 font-size: 2em;
+                padding: 1em 0;
             }
         }
 
         p {
             flex: 2;
             @include serviceDescription;
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0 auto;
             text-align: center;
             width: 70%;
@@ -756,12 +607,12 @@ body {
                 padding-bottom: 2.5em;
             }
             @include laptop {
-                font-size: 1.75em;
+                font-size: 1.5em;
                 width: 70%;
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.8em;
+                font-size: 1.2em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -819,30 +670,38 @@ body {
         h2 {
             @include serviceHeading;
             flex: 1;
+            font-size: 4em;
+            padding: 1em 0 0 0;
             @include laptopLarge {
                 font-size: 4em;
+                padding: 1em 0;
             }
             @include laptop {
                 font-size: 3em;
+                padding: 1em 0;
             }
             @include tablet {
-                font-size: 3em;
+                font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneLarge {
                 font-size: 2.5em;
+                padding: 1em 0;
             }
             @include smartphoneMedium {
                 font-size: 2em;
+                padding: 1em 0;
             }
             @include smartphone {
                 font-size: 2em;
+                padding: 1em 0;
             }
         }
 
         p {
             flex: 2;
             @include serviceDescription;
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0 auto;
             text-align: center;
             width: 70%;
@@ -852,12 +711,12 @@ body {
                 padding-bottom: 2.5em;
             }
             @include laptop {
-                font-size: 1.75em;
+                font-size: 1.5em;
                 width: 70%;
                 padding-bottom: 2em;
             }
             @include tablet {
-                font-size: 1.8em;
+                font-size: 1.2em;
                 width: 70%;
                 padding-bottom: 3em;
             }
@@ -897,6 +756,10 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        padding: 2em 0 0 0;
+        @include laptopLarge {
+            padding: 2em 0 0 0;
+        }
         @include smartphoneLarge {
             img {
                 display: none;
@@ -915,29 +778,40 @@ body {
         
         h1 {
             @include pageHeading;
+            font-size: 4em;
+            text-align: center;
+            width: 90%;
             @include laptopLarge {
-                font-size: 3em;
+                font-size: 4em;
                 text-align: center;
+                width: 80%;
             }
             @include laptop {
-                font-size: 2.5em;
+                padding: 1em 0 0 0;
                 text-align: center;
+                font-size: 2.5em;
+                width: 90%;
             }
             @include tablet {
+                padding: 1em 0 0 0;
                 text-align: center;
                 font-size: 2em;
+                width: 90%;
             }
             @include smartphoneLarge {
+                padding: 1em 0 0 0;
                 text-align: center;
                 font-size: 2.5em;
                 width: 90%;
             }
             @include smartphoneMedium {
+                padding: 1em 0 0 0;
                 text-align: center;
                 font-size: 2em;
                 width: 90%;
             }
             @include smartphone {
+                padding: 1em 0 0 0;
                 text-align: center;
                 font-size: 2em;
                 width: 90%;
@@ -990,9 +864,10 @@ body {
             width: 60%;
             text-align: center;
             margin: 2em auto;
+            font-size: 2em;
             @include pageDescription;
             @include laptopLarge {
-                font-size: 1.5em;
+                font-size: 2em;
             }
             @include laptop{
                 font-size: 1.5em;
@@ -1028,24 +903,28 @@ body {
     h1 {
         @include pageHeading;
         color: $heroHeading;
-        padding: 1em;
+        font-size: 4em;
+        padding: 1em 0;
         @include laptopLarge {
-            font-size: 3em;
+            font-size: 4em;
+            padding: 1em 0;
         }
         @include laptop {
             font-size: 2.5em;
+            padding: 1em 0;
         }
         @include tablet {
             font-size: 2em;
+            padding: 1em 0;
         }
         @include smartphoneLarge {
-            font-size: 2.5em;
+            font-size: 2em;
         }
         @include smartphoneMedium {
             font-size: 2em;
         }
         @include smartphone {
-            font-size: 2em;
+            font-size: 1.8em;
         }
 
         span {
@@ -1058,10 +937,16 @@ body {
         justify-content: space-evenly;
         flex-wrap: wrap;
         flex-basis: 25%;
+        margin: 1em;
 
         div {
+            @include laptop {
+                width: 30%;
+                margin: 1em;
+            }
             @include tablet {
-                width: 50%;
+                width: 30%;
+                margin: 1em;
             }
             @include smartphoneLarge {
                 width: 100%;
@@ -1098,7 +983,7 @@ body {
                 font-size: 1.25em;
             }
             @include tablet {
-                font-size: 1.5em;
+                font-size: 1em;
             }
             @include smartphoneLarge {
                 font-size: 1.25em;
@@ -1117,12 +1002,12 @@ body {
                 width: 100px;
             }
             @include laptop {
-                height: 100px;
-                width: 100px;
+                height: 80px;
+                width: 80px;
             }
             @include tablet {
-                height: 100px;
-                width: 100px;
+                height: 80px;
+                width: 80px;
             }
             @include smartphoneLarge {
                 height: 80px;
@@ -1146,26 +1031,34 @@ body {
     text-align: center;
     width: 70%;
     margin: 0 auto;
+    font-size: 3em;
+    padding: 1em 0;
 
     h1 {
         @include pageHeading;
         @include laptopLarge {
             font-size: 3em;
+            padding: 1em 0;
         }
         @include laptop{
             font-size: 2.5em;
+            padding: 1em 0;
         }
         @include tablet{
             font-size: 2em;
+            padding: 1em 0;
         }
         @include smartphoneLarge{
             font-size: 2.5em;
+            padding: 1em 0;
         }
         @include smartphoneMedium{
             font-size: 2em;
+            padding: 1em 0;
         }
         @include smartphone{
             font-size: 2em;
+            padding: 1em 0;
         }
     }
 
@@ -1180,7 +1073,7 @@ body {
 // Getting Started Section
 .get_started_wrapper {
     text-align: center;
-    margin: 3em 0;
+    margin: 8em 0 4em 0;
 
 
     .get_started_header{
@@ -1207,6 +1100,7 @@ body {
 
         h1 {
             @include pageHeading;
+            font-size: 4em;
             @include laptopLarge {
                 font-size: 3em;
             }
@@ -1238,6 +1132,12 @@ body {
         @include heroDescription;
         margin: 1em;
         font-size: 2em;
+        @include laptop {
+            font-size: 1.5em;
+        }
+        @include tablet {
+            font-size: 1.5em;
+        }
         @include smartphoneLarge {
             font-size: 1.25em;
         }
@@ -1286,27 +1186,42 @@ body {
     .footer_sections {
         padding: .5em;
         margin: 0 auto;
-        width: 30%;
-        align-items: center;
-        justify-content: space-between;
+        width: 60%;
+        padding: 2em 0 0 0;
+        justify-content: space-evenly;
         display: flex;
         flex-direction: row;
         a {
             text-decoration: none;
             @include footerSections;
         }
+        @include laptopLarge {
+            width: 60%;
+            padding: 2em 0 0 0;
+            justify-content: space-evenly;
+        }
+        @include laptop {
+            width: 80%;
+            padding: 2em 0 0 0;
+            justify-content: space-evenly;
+        }
         @include tablet {
-            width: 50%;
+            width: 80%;
+            padding: 2em 0 0 0;
+            justify-content: space-evenly;
         }
         @include smartphoneLarge {
+            padding: 2em 0 0 0;
             width: 100%;
             justify-content: space-evenly;
         }
         @include smartphoneMedium {
+            padding: 2em 0 0 0;
             width: 100%;
             justify-content: space-evenly;
         }
         @include smartphone {
+            padding: 2em 0 0 0;
             width: 100%;
             justify-content: space-evenly;
         }
@@ -1315,19 +1230,24 @@ body {
     .footer_socials {
         font-size: 2em;
         margin: 0 auto;
-        width: 10%;
-        align-items: center;
-        justify-content: space-between;
+        width: 40%;
+        justify-content: space-evenly;
         text-align: center;
         display: flex;
         flex-direction: row;
         color: $heroHeading;
         padding: .5em;
+        @include laptopLarge {
+            width: 40%;
+            justify-content: space-evenly;
+        }
         @include laptop {
-            width: 15%;
+            width: 60%;
+            justify-content: space-evenly;
         }
         @include tablet {
-            width: 20%;
+            width: 70%;
+            justify-content: space-evenly;
         }
         @include smartphoneLarge {
             width: 70%;
