@@ -11,15 +11,15 @@ body {
 }
 
 #navbar {
+  z-index: 1;
   border-color: red !important;
-  margin-bottom: 10em;
 }
 
 .hero_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 90vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

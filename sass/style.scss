@@ -21,15 +21,15 @@ body {
 
 
 #navbar {
+    z-index: 1;
     border-color: red !important;
-    margin-bottom: 10em;
 
 }
 
 // Hero Section
 .hero_wrapper {
     display: flex;
-    height: 100vh;
+    height: 90vh;
     align-items: center;
     background-color: $primaryBackground;
     @include laptop{
