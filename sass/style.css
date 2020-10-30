@@ -2095,13 +2095,23 @@ body {
   }
 }
 
+.footer_wrapper .icon_atrribution {
+  font-size: .3em;
+  color: #969696;
+}
+
+.footer_wrapper .icon_atrribution a {
+  text-decoration: none;
+  color: #969696;
+}
+
 .footer_wrapper span {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   text-align: center;
   font-weight: 300;
   color: #ffffff;
-  color: #969696;
+  color: #ffffff;
 }
 
 * {

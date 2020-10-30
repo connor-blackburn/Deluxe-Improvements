@@ -1263,9 +1263,18 @@ body {
         }
     }
 
+    .icon_atrribution {
+        font-size: .3em;
+        color: $description;
+        a {
+            text-decoration: none;
+            color: $description;
+        }
+    }
+
     span {
         @include footerSections;
-        color: $description;
+        color: $heroHeading;
     }
 }
 
