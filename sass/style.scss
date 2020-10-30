@@ -825,19 +825,21 @@ body {
 
     .tesimonial_content {
         flex: 2;
+        margin: 2em 0;
         
         img {
             position: absolute;
             margin: -3em 0 0 7em;
             opacity: .8;
             @include laptop {
+                margin: -6em 0 0 3em;
                 height: 200px;
                 width: 200px;
             }
             @include tablet {
-                height: 200px;
-                width: 200px;
-                margin: -2em 0 0 3em;
+                height: 150px;
+                width: 150px;
+                margin: -6em 0 0 3em;
                 opacity: 0.9;
             }
             @include smartphoneLarge {
@@ -1306,4 +1308,51 @@ body { font-family: sans-serif; }
   .carousel-cell img {
     height: 400px;
   }
+}
+
+
+
+#testimonials {
+.carousel-testimonails {
+  background: transparent;
+}
+
+.carousel-cell-testimonial {
+    width: 90%;
+    margin-right: 10px;
+    background: transparent;
+    border-radius: 5px;
+
+    @include smartphoneLarge {
+        width: 80%;    
+    }
+    @include smartphoneMedium {
+        width: 80%;    
+    }
+    @include smartphone {
+        width: 80%;    
+    }
+
+    p {
+        @include serviceDescription;
+        font-size: 2em;
+        @include laptop {
+            font-size: 1.5em;
+        }
+        @include tablet {
+            font-size: 1.5em;
+        }
+        @include smartphoneLarge {
+            font-size: 1.25em;
+        }
+        @include smartphoneMedium {
+            font-size: 1em;
+        }
+        @include smartphone {
+            font-size: 1em;
+        }
+    }
+}
+
+
 }
