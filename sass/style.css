@@ -1955,6 +1955,10 @@ body {
           flex-direction: row;
 }
 
+.footer_wrapper .footer_sections :hover {
+  color: #00854B;
+}
+
 .footer_wrapper .footer_sections a {
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
@@ -2041,6 +2045,15 @@ body {
           flex-direction: row;
   color: #ffffff;
   padding: .5em;
+}
+
+.footer_wrapper .footer_socials a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer_wrapper .footer_socials a :hover {
+  color: #00854B;
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {

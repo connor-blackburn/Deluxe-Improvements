@@ -1193,6 +1193,9 @@ body {
         justify-content: space-evenly;
         display: flex;
         flex-direction: row;
+        :hover {
+            color: $accent;
+        }
         a {
             text-decoration: none;
             @include footerSections;
@@ -1239,6 +1242,13 @@ body {
         flex-direction: row;
         color: $heroHeading;
         padding: .5em;
+        a {
+            text-decoration: none;
+            color: $heroHeading;
+            :hover {
+                color: $accent;
+            }
+        }
         @include laptopLarge {
             width: 40%;
             justify-content: space-evenly;
