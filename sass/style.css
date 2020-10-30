@@ -222,7 +222,7 @@ body {
 @media (min-width: 321px) and (max-width: 375px) {
   .hero_left p {
     color: #000000;
-    font-size: 1.25em;
+    font-size: 1.1em;
     margin: 2em .5em;
   }
 }
